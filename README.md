@@ -1,6 +1,6 @@
 Group Project
 
-# <p align="center">How Has Energy Consumption Changed Overtime?> </p>
+# <p align="center">How Has Energy Consumption Changed Overtime? </p>
 
 
 ## <p align="center">Participants: Allyson Taylor, Luke Ellison, & James Martin</p>
