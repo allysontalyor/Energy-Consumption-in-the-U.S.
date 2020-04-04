@@ -20,18 +20,18 @@ Group Project
 
 According to eig.gov, in 2017 the  U.S. total primary energy consumption was about 98 quadrillion British thermal units (BTU), which was about 17% of the worlds 582 quadrillion British thermal units (BTU). The different types of unites include: 
 
-•	Coal              
-•	Motor Gasoline
-•	Distillate Fuel Oil                
-•	Jet Fuel       
-•	Other Petroleum
-•	Nuclear Electric Power	
-•	Hydroelectric Power	         
-•	Biomass
-•	Natural Gas     
-•	Net Electricity Imports
-•	Net Interstate Flow of Electricity  
-•	Other Renewables
+-	Coal              
+-	Motor Gasoline
+-	Distillate Fuel Oil                
+-	Jet Fuel       
+-	Other Petroleum
+-	Nuclear Electric Power	
+-	Hydroelectric Power	         
+-	Biomass
+-	Natural Gas     
+-	Net Electricity Imports
+-	Net Interstate Flow of Electricity  
+-	Other Renewables
 
 Our goal is to provide data regarding energy consumption by using CSV from: 
 https://www.eia.gov/state/seds/seds-data-complete.php#CompleteDataFile
