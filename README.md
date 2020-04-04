@@ -10,11 +10,11 @@ Group Project
 
 ##Aims:
 
--	AIM 1: 	  Analyze the energy consumption data between the dates of 1960-2017
+-	AIM 1: 	Analyze the energy consumption data between the dates of 1960-2017
 -	AIM 2:  Look at the different types of energy consumption and draw a conclusion by understanding the changes in data
 -	AIM 3: Understand the trends in energy consumption around the U.S. within each dataset from the U.S. Energy Information Administration
 -	AIM 4: Utilize Analysis tools such as :  Python | JavaScript | Toast UI Chart | CSV | Json
--	AIM 5:  Provide data on energy consumption around the U.S.
+-	AIM 5: Provide data on energy consumption around the U.S.
 
 ## Impact and Intended Results
 
