@@ -33,7 +33,7 @@ According to eig.gov, in 2017 the  U.S. total primary energy consumption was abo
 -	Net Interstate Flow of Electricity  
 -	Other Renewables
 
-Our goal is to provide data regarding energy consumption by using CSV from: 
+Our goal is to provide data regarding energy consumption by using CSVs from: 
 https://www.eia.gov/state/seds/seds-data-complete.php#CompleteDataFile
 
 
