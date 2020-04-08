@@ -11,7 +11,7 @@ from sqlalchemy import create_engine, inspect, func
 # conn = engine.connect()
 
 
-engine = create_engine('postgresql://postgres:Notkerino342@localhost:5432/EnergyDB')
+engine = create_engine('postgresql://postgres:password@localhost:5432/EnergyDB')
 connection = engine.connect()
 inspector = inspect(engine)
 print(inspector.get_table_names())
