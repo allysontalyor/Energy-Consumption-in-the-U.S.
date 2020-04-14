@@ -1,28 +1,33 @@
 from flask import Flask, render_template, jsonify
 import json
+import pandas as pd
+from json import dumps
 import sqlalchemy
+from sqlalchemy.orm import class_mapper
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, inspect, func
 
-# conn = psycopg2.connect(host="localhost", database="EnergyDB", user="postgres", password="Notker4682")
-
-# engine = db.create_engine('postgresql://postgres:Notker4682@localhost:5432/EnergyDB')
-# conn = engine.connect()
-
-
-engine = create_engine('postgresql://postgres:password@localhost:5432/EnergyDB')
+engine = create_engine('postgresql://postgres:Notkerino342@localhost:5432/EnergyDB')
 connection = engine.connect()
 inspector = inspect(engine)
 print(inspector.get_table_names())
 
-residential = engine.execute('SELECT * FROM "Residential_Sector"').fetchall()
-commercial = engine.execute('SELECT * FROM "Commercial_Sector"').fetchall()
-industrial = engine.execute('SELECT * FROM "Industrial_Sector"').fetchall()
-transportation = engine.execute('SELECT * FROM "Transportation_Sector"').fetchall()
-total_consumption = engine.execute('SELECT * FROM "Total_Consumption"').fetchall()
-state_sources = engine.execute('SELECT * FROM "State_Sources"').fetchall()
-us_sources = engine.execute('SELECT * FROM "US_Sources"').fetchall()
+residential1 = pd.read_sql('SELECT * FROM "Residential_Sector"', connection)
+commercial1 = pd.read_sql('SELECT * FROM "Commercial_Sector"', connection)
+industrial1 = pd.read_sql('SELECT * FROM "Industrial_Sector"', connection)
+transportation1 = pd.read_sql('SELECT * FROM "Transportation_Sector"', connection)
+total_consumption1 = pd.read_sql('SELECT * FROM "Total_Consumption"', connection)
+state_sources1 = pd.read_sql('SELECT * FROM "State_Sources"', connection)
+us_sources1 = pd.read_sql('SELECT * FROM "US_Sources"', connection)
+
+residential = residential1.to_dict()
+commercial = commercial1.to_dict()
+industrial = industrial1.to_dict()
+transportation = transportation1.to_dict()
+total_consumption = total_consumption1.to_dict()
+state_sources = state_sources1.to_dict()
+us_sources = us_sources1.to_dict()
 
 # --------------------------------------------------
 
