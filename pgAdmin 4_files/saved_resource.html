@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<!-- saved from url=(0102)http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&sgid=1&sid=1&server_type=pg&did=24576 -->
+<html class="no-js"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Project-2/postgres@PostgreSQL 12</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- To set pgAdmin4 shortcut icon in browser -->
+    <link rel="shortcut icon" href="http://127.0.0.1:49315/favicon.ico?ver=41400">
+
+    <!-- Base template stylesheets -->
+    <link type="text/css" rel="stylesheet" href="./style.css">
+    <link type="text/css" rel="stylesheet" href="./pgadmin.css">
+
+     <!--View specified stylesheets-->
+    
+    <script>
+        /* This is used to change publicPath of webpack at runtime */
+        window.getChunkURL = function() {
+            return "/static/js/generated/";
+        };
+    </script>
+    <!-- Base template scripts -->
+    <script type="text/javascript" src="./require.min.js"></script>
+    <script type="text/javascript">
+            require.config({
+                baseUrl: '',
+                urlArgs: 'ver=41400',
+                waitSeconds: 0,
+                shim: {},
+                paths: {
+                    sources: "/static/js",
+                    datagrid: "/static/js/generated/datagrid",
+                    sqleditor: "/static/js/generated/sqleditor",
+                    'pgadmin.browser.utils': "/browser/" + "js/utils",
+                    'pgadmin.browser.endpoints': "/browser/" + "js/endpoints",
+                    'pgadmin.browser.messages': "/browser/" + "js/messages",
+                    'pgadmin.server.supported_servers': "/browser/" + "server/supported_servers",
+                    'pgadmin.user_management.current_user': "/user_management/" + "current_user",
+                    'translations': "/tools/" + "translations"
+                }
+            });
+
+    </script>
+
+    <!-- View specified scripts -->
+    <script type="text/javascript" src="./vendor.main.js"></script>
+    <script type="text/javascript" src="./vendor.others.js"></script>
+    <script type="text/javascript" src="./pgadmin_commons.js"></script>
+
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/generated/sqleditor" src="./sqleditor.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/generated/browser_nodes" src="./browser_nodes.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/generated/codemirror" src="./codemirror.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/generated/slickgrid" src="./slickgrid.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="translations" src="./translations.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pgadmin.browser.endpoints" src="./endpoints.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pgadmin.browser.utils" src="./utils.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pgadmin.user_management.current_user" src="./current_user.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pgadmin.browser.messages" src="./messages.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pgadmin.server.supported_servers" src="./supported_servers.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/gettext" src="./gettext.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/pgadmin" src="./pgadmin.js"></script><link id="wcTheme" rel="stylesheet" type="text/css" href="./webcabin.overrides(1).css"><style type="text/css" rel="stylesheet">.slickgrid_149452 .slick-header-column { left: 1000px; } .slickgrid_149452 .slick-top-panel { height:25px; } .slickgrid_149452 .slick-preheader-panel { height:25px; } .slickgrid_149452 .slick-headerrow-columns { height:25px; } .slickgrid_149452 .slick-footerrow-columns { height:25px; } .slickgrid_149452 .slick-cell { height:25px; } .slickgrid_149452 .slick-row { height:25px; } .slickgrid_149452 .l0 { } .slickgrid_149452 .r0 { } .slickgrid_149452 .l1 { } .slickgrid_149452 .r1 { } .slickgrid_149452 .l2 { } .slickgrid_149452 .r2 { } .slickgrid_149452 .l3 { } .slickgrid_149452 .r3 { } .slickgrid_149452 .l4 { } .slickgrid_149452 .r4 { } .slickgrid_149452 .l5 { } .slickgrid_149452 .r5 { } .slickgrid_149452 .l6 { } .slickgrid_149452 .r6 { } .slickgrid_149452 .l7 { } .slickgrid_149452 .r7 { } .slickgrid_149452 .l8 { } .slickgrid_149452 .r8 { } .slickgrid_149452 .l9 { } .slickgrid_149452 .r9 { } .slickgrid_149452 .l10 { } .slickgrid_149452 .r10 { } .slickgrid_149452 .l11 { } .slickgrid_149452 .r11 { } .slickgrid_149452 .l12 { } .slickgrid_149452 .r12 { } .slickgrid_149452 .l13 { } .slickgrid_149452 .r13 { } .slickgrid_149452 .l14 { } .slickgrid_149452 .r14 { } .slickgrid_149452 .l15 { } .slickgrid_149452 .r15 { } .slickgrid_149452 .l16 { } .slickgrid_149452 .r16 { } .slickgrid_149452 .l17 { } .slickgrid_149452 .r17 { } .slickgrid_149452 .l18 { } .slickgrid_149452 .r18 { } .slickgrid_149452 .l19 { } .slickgrid_149452 .r19 { } .slickgrid_149452 .l20 { } .slickgrid_149452 .r20 { } .slickgrid_149452 .l21 { } .slickgrid_149452 .r21 { } .slickgrid_149452 .l22 { } .slickgrid_149452 .r22 { } .slickgrid_149452 .l23 { } .slickgrid_149452 .r23 { } .slickgrid_149452 .l24 { } .slickgrid_149452 .r24 { } .slickgrid_149452 .l25 { } .slickgrid_149452 .r25 { } .slickgrid_149452 .l26 { } .slickgrid_149452 .r26 { } .slickgrid_149452 .l27 { } .slickgrid_149452 .r27 { } .slickgrid_149452 .l28 { } .slickgrid_149452 .r28 { } .slickgrid_149452 .l29 { } .slickgrid_149452 .r29 { } .slickgrid_149452 .l30 { } .slickgrid_149452 .r30 { } .slickgrid_149452 .l31 { } .slickgrid_149452 .r31 { } .slickgrid_149452 .l32 { } .slickgrid_149452 .r32 { } .slickgrid_149452 .l33 { } .slickgrid_149452 .r33 { } .slickgrid_149452 .l34 { } .slickgrid_149452 .r34 { } .slickgrid_149452 .l35 { } .slickgrid_149452 .r35 { } .slickgrid_149452 .l36 { } .slickgrid_149452 .r36 { } .slickgrid_149452 .l37 { } .slickgrid_149452 .r37 { } .slickgrid_149452 .l38 { } .slickgrid_149452 .r38 { } .slickgrid_149452 .l39 { } .slickgrid_149452 .r39 { } .slickgrid_149452 .l40 { } .slickgrid_149452 .r40 { } .slickgrid_149452 .l41 { } .slickgrid_149452 .r41 { } .slickgrid_149452 .l42 { } .slickgrid_149452 .r42 { } .slickgrid_149452 .l43 { } .slickgrid_149452 .r43 { } .slickgrid_149452 .l44 { } .slickgrid_149452 .r44 { } .slickgrid_149452 .l45 { } .slickgrid_149452 .r45 { } .slickgrid_149452 .l46 { } .slickgrid_149452 .r46 { } .slickgrid_149452 .l47 { } .slickgrid_149452 .r47 { } .slickgrid_149452 .l48 { } .slickgrid_149452 .r48 { } .slickgrid_149452 .l49 { } .slickgrid_149452 .r49 { } .slickgrid_149452 .l50 { } .slickgrid_149452 .r50 { } .slickgrid_149452 .l51 { } .slickgrid_149452 .r51 { } .slickgrid_149452 .l52 { } .slickgrid_149452 .r52 { } .slickgrid_149452 .l53 { } .slickgrid_149452 .r53 { } .slickgrid_149452 .l54 { } .slickgrid_149452 .r54 { } .slickgrid_149452 .l55 { } .slickgrid_149452 .r55 { } .slickgrid_149452 .l56 { } .slickgrid_149452 .r56 { } .slickgrid_149452 .l57 { } .slickgrid_149452 .r57 { } .slickgrid_149452 .l58 { } .slickgrid_149452 .r58 { } .slickgrid_149452 .l59 { } .slickgrid_149452 .r59 { } .slickgrid_149452 .l60 { } .slickgrid_149452 .r60 { } .slickgrid_149452 .l61 { } .slickgrid_149452 .r61 { }</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/generated/file_utils" src="./file_utils.js"></script><style>body.tablesorter-disableSelection { -ms-user-select: none; -moz-user-select: -moz-none;-khtml-user-select: none; -webkit-user-select: none; user-select: none; }.tablesorter-resizable-container { position: relative; height: 1px; }.tablesorter-resizable-handle { position: absolute; display: inline-block; width: 8px;top: 1px; cursor: ew-resize; z-index: 3; user-select: none; -moz-user-select: none; }</style></head>
+<body tabindex="0" class="wcDesktop">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<style>
+    body {padding: 0px;}
+    </style>
+<div id="main-editor_panel">
+    <div class="sql-editor">
+        <div id="btn-toolbar" class="editor-toolbar" role="toolbar" aria-label="">
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-load-file" type="button" class="btn btn-sm btn-secondary btn-load-file" title="Open File (accesskey + O)" accesskey="O" tabindex="0">
+                    <i class="fa fa-folder-open-o sql-icon-lg" aria-hidden="true"></i>
+                </button>
+                <button id="btn-save-file" type="button" class="btn btn-sm btn-secondary" title="Save File (accesskey + S)" accesskey="S">
+                    <i class="fa fa-floppy-o sql-icon-lg" aria-hidden="true" tabindex="0"></i>
+                </button>
+                <button id="btn-file-menu-dropdown" type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-file-menu-save" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0" style="display: block;">
+                            <span>Save</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-file-menu-save-as" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <span>Save As</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-save-data" type="button" class="btn btn-sm btn-secondary" title="Save Data Changes (F6)" accesskey="" tabindex="0" disabled="">
+                    <i class="icon-save-data-changes sql-icon-lg" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-find" type="button" class="btn btn-sm btn-secondary" title="Find (Ctrl/Cmd+F)">
+                    <i class="fa fa-search sql-icon-lg" aria-hidden="true" tabindex="0"></i>
+                </button>
+                <button id="btn-find-menu-dropdown" type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Find (accesskey + N)" accesskey="N" tabindex="0">
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-find" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <span> Find (Cmd+F)
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-find-next" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <span> Find Next (Cmd+G)
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-find-previous" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <span> Find Previous (Cmd+Shift+G)
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-find-persistent" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <span>Persistent Find</span>
+                        </a>
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-replace" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <span> Replace (Cmd+Shift+F)
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-replace-all" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <span>Replace All</span>
+                        </a>
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-jump" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <span>Jump (Alt+G)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-copy-row" type="button" class="btn btn-sm btn-secondary" title="Copy (accesskey + C)" accesskey="C" tabindex="0" disabled="">
+                    <i class="fa fa-files-o sql-icon-lg" aria-hidden="true"></i>
+                </button>
+                <button id="btn-copy-row-dropdown" type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-copy-with-header" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <i class="copy-with-header fa fa-check visibility-hidden" aria-hidden="true"></i>
+                            <span> Copy with headers </span>
+                        </a>
+                    </li>
+                </ul>
+                <button id="btn-paste-row" type="button" class="btn btn-sm btn-secondary" title="Paste (accesskey + P)" accesskey="P" tabindex="0" disabled="">
+                    <i class="fa fa-clipboard sql-icon-lg" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-delete-row" type="button" class="btn btn-sm btn-secondary" title="Delete (accesskey + D)" accesskey="D" tabindex="0" disabled="">
+                    <i class="fa fa-trash sql-icon-lg" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-edit-dropdown" type="button" class="btn btn-sm btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Edit" tabindex="0">
+                    <i class="fa fa-pencil-square-o sql-icon-lg" aria-hidden="true"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-indent-code" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <span> Indent Selection (Tab) </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-unindent-code" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <span> Unindent Selection (Shift+Tab) </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-comment-line" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <span> Inline Comment Selection (Cmd+/)
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-uncomment-line" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <span> Inline Uncomment Selection (Cmd+.)
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-toggle-comment-block" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <span> Block Comment/Uncomment Selection (Shift+Cmd+/)
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-filter" type="button" class="btn btn-sm btn-secondary" title="Filter (accesskey + F)" accesskey="F" tabindex="0" disabled="">
+                    <i class="fa fa-filter sql-icon-lg" aria-hidden="true"></i>
+                </button>
+                <button id="btn-filter-dropdown" type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Filter options (accesskey + I)" accesskey="I" disabled="" tabindex="0">
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li>
+                        <a id="btn-filter-menu" class="dropdown-item" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">Sort/Filter</a>
+                    </li>
+                    <li>
+                        <a id="btn-include-filter" class="dropdown-item" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">Filter by Selection</a>
+                    </li>
+                    <li>
+                        <a id="btn-exclude-filter" class="dropdown-item" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">Exclude by Selection</a>
+                    </li>
+                    <li>
+                        <a id="btn-remove-filter" class="dropdown-item" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">Remove Sort/Filter</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <select id="btn-rows-limit" class="limit" disabled="" title="Rows limit (accesskey + R)" accesskey="R" tabindex="0">
+                    <option value="-1">No limit</option>
+                    <option value="1000">1000 rows</option>
+                    <option value="500">500 rows</option>
+                    <option value="100">100 rows</option>
+                </select>
+            </div>
+
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-cancel-query" type="button" class="btn btn-sm btn-secondary" title="Cancel query (accesskey + Q)" accesskey="Q" tabindex="0" disabled="">
+                    <i class="fa fa-stop sql-icon-lg" aria-hidden="true"></i>
+                </button>
+                <button id="btn-flash" data-test-selector="execute-refresh-button" type="button" class="btn btn-sm btn-secondary" style="width: 32px;" title="Execute/Refresh (F5)" tabindex="0">
+                    <i class="fa fa-bolt sql-icon-lg" aria-hidden="true"></i>
+                </button>
+                <button id="btn-query-dropdown" type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" accesskey="X" title="Execute options (accesskey + X)" tabindex="0">
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-auto-commit" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <i class="auto-commit fa fa-check" aria-hidden="true"></i>
+                            <span> Auto commit? </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-auto-rollback" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <i class="auto-rollback fa fa-check visibility-hidden" aria-hidden="true"></i>
+                            <span> Auto rollback? </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-explain" type="button" class="btn btn-sm btn-secondary" title="Explain (F7)" accesskey="" tabindex="0">
+                    <i class="fa fa-hand-pointer-o sql-icon-lg" aria-hidden="true"></i>
+                </button>
+                <button id="btn-explain-analyze" type="button" class="btn btn-sm btn-secondary" title="Explain Analyze (Shift+F7)" accesskey="">
+                    <i class="fa fa-list-alt sql-icon-lg" aria-hidden="true"></i>
+                </button>
+                <button id="btn-explain-options-dropdown" type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-explain-verbose" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <i class="explain-verbose fa fa-check visibility-hidden" aria-hidden="true"></i>
+                            <span> Verbose </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-explain-costs" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <i class="explain-costs fa fa-check visibility-hidden" aria-hidden="true"></i>
+                            <span> Costs </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-explain-buffers" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <i class="explain-buffers fa fa-check visibility-hidden" aria-hidden="true"></i>
+                            <span> Buffers </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-explain-timing" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <i class="explain-timing fa fa-check visibility-hidden" aria-hidden="true"></i>
+                            <span> Timing </span>
+                        </a>
+                    </li>
+                    <li data-min-ver="100000">
+                        <a class="dropdown-item" id="btn-explain-summary" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <i class="explain-summary fa fa-check visibility-hidden" aria-hidden="true"></i>
+                            <span> Summary </span>
+                        </a>
+                    </li>
+                    <li data-min-ver="120000">
+                        <a class="dropdown-item" id="btn-explain-settings" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <i class="explain-settings fa fa-check visibility-hidden" aria-hidden="true"></i>
+                            <span> Settings </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-commit" type="button" class="btn btn-sm btn-secondary" title="Commit (Shift+Ctrl+M)" accesskey="" tabindex="0" disabled="">
+                    <i class="icon-commit sql-icon-lg" aria-hidden="true"></i>
+                </button>
+                <button id="btn-rollback" type="button" class="btn btn-sm btn-secondary" title="Rollback (Shift+Ctrl+R)" tabindex="0" disabled="">
+                    <i class="icon-rollback sql-icon-lg" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-clear-dropdown" type="button" class="btn btn-sm btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Clear (accesskey + L)" accesskey="L" tabindex="0">
+                    <i class="fa fa-eraser sql-icon-lg" aria-hidden="true"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-clear" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <span> Clear Query Window </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-clear-history" href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="0">
+                            <span> Clear History </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group" role="group" aria-label="">
+                <button id="btn-download" type="button" class="btn btn-sm btn-secondary" title="Download as CSV (F8)" tabindex="0">
+                    <i class="fa fa-download sql-icon-lg" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="connection_status_wrapper d-flex">
+            <div id="btn-conn-status" class="connection_status d-flex justify-content-center align-items-center" data-container="body" data-toggle="popover" data-placement="bottom" data-content="The session is idle and there is no current transaction." data-panel-visible="visible" accesskey="T" tabindex="0" data-original-title="" title="">
+                <i class="fa-custom fa-query-tool-connected" aria-hidden="true" title="Connection status (click for details) (accesskey + T)">
+                </i>
+            </div>
+            <div class="editor-title" style="background-color: ; color: ;">Project-2/postgres@PostgreSQL 12</div>
+        </div>
+        <div id="editor-panel" tabindex="0">
+            <div id="fetching_data" class="pg-sp-container sql-editor-busy-fetching d-none">
+                <div class="pg-sp-content">
+                    <div class="row">
+                        <div class="col-12 pg-sp-icon sql-editor-busy-icon"></div>
+                    </div>
+                    <div class="row"><div class="col-12 pg-sp-text sql-editor-busy-text">Loading data from the database server and rendering...</div></div>
+                </div>
+            </div>
+        <div class="wcDocker"><div class="wcDockerTransition"></div><div class="wcLayoutPane" style="height: 258px; top: 0px; left: 0px; right: 0px;"><div class="wcLayoutPane" style="width: 768.75px; left: 0px; top: 0px; bottom: 0px;"><div class="wcFrame wcWide wcTall"><div class="wcFrameTitleBar wcTabTop" style="width: 768.75px;"><div class="wcTabScroller" style="left: 0px;"><div class="wcPanelTab wcPanelTabActive" id="0"><div><a href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="-1" class="panel-link-heading">Query Editor</a></div></div><div class="wcPanelTab" id="1"><div><a href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="-1" class="panel-link-heading">Query History</a></div></div></div><div class="wcFrameButtonBar" style="min-width: 0px; width: 0px; right: 0px;"></div></div><div class="wcFrameButtonBar" style="min-width: 0px; width: 0px;"><div class="wcFrameButton" title="Close the currently active panel tab" style="display: none;"><div class="fa fa-close"></div></div><div class="wcFrameButton" title="Collapse the active panel" style="display: none;"><div class="fa fa-download"></div>C</div></div><div class="wcFrameCenter wcPanelBackground wcScrollableX wcScrollableY" style="left: 0px; right: 0px; bottom: 0px;"><div class="wcPanelTabContent" id="0"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content"><div id="output-panel" tabindex="0"><textarea id="sql_query_tool" tabindex="-1" style="display: none;"></textarea><div class="CodeMirror cm-s-default CodeMirror-simplescroll CodeMirror-focused" style="font-size: 1em;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 216px; left: 298.047px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-simplescroll-horizontal" cm-not-content="true" style="display: none;"><div></div></div><div class="CodeMirror-simplescroll-vertical" cm-not-content="true" style="display: block; bottom: 0px;"><div style="height: 41.2373px; top: 51.0634px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 42px; margin-bottom: 0px; border-right-width: 30px; min-height: 1373px; min-width: 326.281px; padding-right: 8px; padding-bottom: 0px;"><div style="position: relative; top: 84px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like">x</pre></div><div class="CodeMirror-measure"><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">select</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-operator CodeMirror-selectedtext">*</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">from</span><span class=" CodeMirror-selectedtext"> "State_Sources"</span><span class="cm-punctuation CodeMirror-selectedtext">;</span></span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style=""></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1960" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1961" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1962" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1963" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1964" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1965" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1966" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1967" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1968" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1969" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1970" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1971" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1972" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1973" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1974" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1975" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1976" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">22</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1977" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">23</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1978" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">24</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1979" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">25</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1980" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">26</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1981" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">27</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1982" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">28</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1983" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">29</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1984" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">30</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1985" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">31</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1986" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">32</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1987" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">33</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1988" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">34</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1989" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">35</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1990" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">36</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1991" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">37</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1992" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">38</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1993" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">39</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1994" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">40</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1995" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">41</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1996" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">42</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1997" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">43</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "1998" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div><div style="position: relative; display: none;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">57</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    "2012" <span class="cm-builtin">int</span>   <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 1373px;"></div><div class="CodeMirror-gutters" style="height: 1403px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div></div></td></tr></tbody></table></div><div class="wcPanelTabContent wcPanelTabContentHidden" id="1"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content"><div id="history_grid" class="sql-editor-history-container d-flex" tabindex="0"><div style="width: calc(50% - 0.5px);"><div class="toggle-and-history-container">
+            <div class="query-history-toggle">
+                <label class="control-label">
+                    Show queries generated internally by pgAdmin?
+                </label>
+                <div class="toggle btn btn-success btn-xs quick" data-toggle="toggle" style="width: 0px; height: 0px;"><input id="generated-queries-toggle" type="checkbox" class="pgadmin-controls" data-style="quick" data-size="mini" data-on="Yes" data-off="No" data-onstyle="success" data-offstyle="primary" checked=""><div class="toggle-group"><label class="btn btn-success btn-xs toggle-on">Yes</label><label class="btn btn-primary btn-xs toggle-off">No</label><span class="toggle-handle btn btn-light btn-xs"></span></div></div>
+            </div>
+            <div id="query_list" class="query-history" tabindex="0"><div class="query-group" data-key="2020 04 14">
+            <div class="date-label">Today - 4/14/2020</div>
+            <ul class="query-entries"><li class="list-item selected" tabindex="0" data-key="13:21:55">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  select * from "State_Sources";
+              </div>
+              <div class="other-info">
+              <div class="timestamp">13:21:55</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="13:21:19">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  select * from "State_Sources";
+              </div>
+              <div class="other-info">
+              <div class="timestamp">13:21:19</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="13:20:58">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  drop table "State_Sources";
+CREATE TABLE "State_Sources" (
+	"State" varchar(6)   NOT NULL,
+	"MSN" varchar(20) not null,
+    "1960" int   NOT NULL,
+    "1961" int   NOT NULL,
+    "1962" int   NOT NULL,
+    "1963" int   NOT NULL,
+    "1964" int   NOT NULL,
+    "1965" int   NOT NULL,
+    "1966" int   NOT NULL,
+    "1967" int   NOT NULL,
+    "1968" int   NOT NULL,
+    "1969" int   NOT NULL,
+    "1970" int   NOT NULL,
+    "1971" int   NOT NULL,
+    "1972" int   NOT NULL,
+    "1973" int   NOT NULL,
+    "1974" int   NOT NULL,
+    "1975" int   NOT NULL,
+    "1976" int   NOT NULL,
+    "1977" int   NOT NULL,
+    "1978" int   NOT NULL,
+    "1979" int   NOT NULL,
+    "1980" int   NOT NULL,
+    "1981" int   NOT NULL,
+    "1982" int   NOT NULL,
+    "1983" int   NOT NULL,
+    "1984" int   NOT NULL,
+    "1985" int   NOT NULL,
+    "1986" int   NOT NULL,
+    "1987" int   NOT NULL,
+    "1988" int   NOT NULL,
+    "1989" int   NOT NULL,
+    "1990" int   NOT NULL,
+    "1991" int   NOT NULL,
+    "1992" int   NOT NULL,
+    "1993" int   NOT NULL,
+    "1994" int   NOT NULL,
+    "1995" int   NOT NULL,
+    "1996" int   NOT NULL,
+    "1997" int   NOT NULL,
+    "1998" int   NOT NULL,
+    "1999" int   NOT NULL,
+    "2000" int   NOT NULL,
+    "2001" int   NOT NULL,
+    "2002" int   NOT NULL,
+    "2003" int   NOT NULL,
+    "2004" int   NOT NULL,
+    "2005" int   NOT NULL,
+    "2006" int   NOT NULL,
+    "2007" int   NOT NULL,
+    "2008" int   NOT NULL,
+    "2009" int   NOT NULL,
+    "2010" int   NOT NULL,
+    "2011" int   NOT NULL,
+    "2012" int   NOT NULL,
+    "2013" int   NOT NULL,
+    "2014" int   NOT NULL,
+    "2015" int   NOT NULL,
+    "2016" int   NOT NULL,
+    "2017" int   NOT NULL,
+	"Energy_Type" varchar(50) not null
+);
+              </div>
+              <div class="other-info">
+              <div class="timestamp">13:20:58</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="12:54:11">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  select * from "State_Sources";
+              </div>
+              <div class="other-info">
+              <div class="timestamp">12:54:11</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="12:53:48">
+          <div class="entry error">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  select * from State_Sources;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">12:53:48</div>
+              </div>
+          </div>
+      </li></ul>
+        </div><div class="query-group" data-key="2020 04 09">
+            <div class="date-label">4/9/2020</div>
+            <ul class="query-entries"><li class="list-item" tabindex="0" data-key="20:47:36">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  select * from "State_Sources";
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:47:36</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:58:23">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  select * from "US_Sources";
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:58:23</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:55:52">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  drop table "US_Sources";
+CREATE TABLE "US_Sources" (
+	"State" varchar(6)   NOT NULL,
+	"MSN" varchar(20) not null,
+    "1960" varchar(25)   NOT NULL,
+    "1961" varchar(25)   NOT NULL,
+    "1962" varchar(25)   NOT NULL,
+    "1963" varchar(25)   NOT NULL,
+    "1964" varchar(25)   NOT NULL,
+    "1965" varchar(25)   NOT NULL,
+    "1966" varchar(25)   NOT NULL,
+    "1967" varchar(25)   NOT NULL,
+    "1968" varchar(25)   NOT NULL,
+    "1969" varchar(25)   NOT NULL,
+    "1970" varchar(25)   NOT NULL,
+    "1971" varchar(25)   NOT NULL,
+    "1972" varchar(25)   NOT NULL,
+    "1973" varchar(25)   NOT NULL,
+    "1974" varchar(25)   NOT NULL,
+    "1975" varchar(25)   NOT NULL,
+    "1976" varchar(25)   NOT NULL,
+    "1977" varchar(25)   NOT NULL,
+    "1978" varchar(25)   NOT NULL,
+    "1979" varchar(25)   NOT NULL,
+    "1980" varchar(25)   NOT NULL,
+    "1981" varchar(25)   NOT NULL,
+    "1982" varchar(25)   NOT NULL,
+    "1983" varchar(25)   NOT NULL,
+    "1984" varchar(25)   NOT NULL,
+    "1985" varchar(25)   NOT NULL,
+    "1986" varchar(25)   NOT NULL,
+    "1987" varchar(25)   NOT NULL,
+    "1988" varchar(25)   NOT NULL,
+    "1989" varchar(25)   NOT NULL,
+    "1990" varchar(25)   NOT NULL,
+    "1991" varchar(25)   NOT NULL,
+    "1992" varchar(25)   NOT NULL,
+    "1993" varchar(25)   NOT NULL,
+    "1994" varchar(25)   NOT NULL,
+    "1995" varchar(25)   NOT NULL,
+    "1996" varchar(25)   NOT NULL,
+    "1997" varchar(25)   NOT NULL,
+    "1998" varchar(25)   NOT NULL,
+    "1999" varchar(25)   NOT NULL,
+    "2000" varchar(25)   NOT NULL,
+    "2001" varchar(25)   NOT NULL,
+    "2002" varchar(25)   NOT NULL,
+    "2003" varchar(25)   NOT NULL,
+    "2004" varchar(25)   NOT NULL,
+    "2005" varchar(25)   NOT NULL,
+    "2006" varchar(25)   NOT NULL,
+    "2007" varchar(25)   NOT NULL,
+    "2008" varchar(25)   NOT NULL,
+    "2009" varchar(25)   NOT NULL,
+    "2010" varchar(25)   NOT NULL,
+    "2011" varchar(25)   NOT NULL,
+    "2012" varchar(25)   NOT NULL,
+    "2013" varchar(25)   NOT NULL,
+    "2014" varchar(25)   NOT NULL,
+    "2015" varchar(25)   NOT NULL,
+    "2016" varchar(25)   NOT NULL,
+    "2017" varchar(25)   NOT NULL,
+	"Energy_Type" varchar(50) not null
+);
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:55:52</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:53:38">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  select * from "State_Sources";
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:53:38</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:16:40">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  drop table "State_Sources";
+CREATE TABLE "State_Sources" (
+	"State" varchar(6)   NOT NULL,
+	"MSN" varchar(20) not null,
+    "1960" varchar(25)   NOT NULL,
+    "1961" varchar(25)   NOT NULL,
+    "1962" varchar(25)   NOT NULL,
+    "1963" varchar(25)   NOT NULL,
+    "1964" varchar(25)   NOT NULL,
+    "1965" varchar(25)   NOT NULL,
+    "1966" varchar(25)   NOT NULL,
+    "1967" varchar(25)   NOT NULL,
+    "1968" varchar(25)   NOT NULL,
+    "1969" varchar(25)   NOT NULL,
+    "1970" varchar(25)   NOT NULL,
+    "1971" varchar(25)   NOT NULL,
+    "1972" varchar(25)   NOT NULL,
+    "1973" varchar(25)   NOT NULL,
+    "1974" varchar(25)   NOT NULL,
+    "1975" varchar(25)   NOT NULL,
+    "1976" varchar(25)   NOT NULL,
+    "1977" varchar(25)   NOT NULL,
+    "1978" varchar(25)   NOT NULL,
+    "1979" varchar(25)   NOT NULL,
+    "1980" varchar(25)   NOT NULL,
+    "1981" varchar(25)   NOT NULL,
+    "1982" varchar(25)   NOT NULL,
+    "1983" varchar(25)   NOT NULL,
+    "1984" varchar(25)   NOT NULL,
+    "1985" varchar(25)   NOT NULL,
+    "1986" varchar(25)   NOT NULL,
+    "1987" varchar(25)   NOT NULL,
+    "1988" varchar(25)   NOT NULL,
+    "1989" varchar(25)   NOT NULL,
+    "1990" varchar(25)   NOT NULL,
+    "1991" varchar(25)   NOT NULL,
+    "1992" varchar(25)   NOT NULL,
+    "1993" varchar(25)   NOT NULL,
+    "1994" varchar(25)   NOT NULL,
+    "1995" varchar(25)   NOT NULL,
+    "1996" varchar(25)   NOT NULL,
+    "1997" varchar(25)   NOT NULL,
+    "1998" varchar(25)   NOT NULL,
+    "1999" varchar(25)   NOT NULL,
+    "2000" varchar(25)   NOT NULL,
+    "2001" varchar(25)   NOT NULL,
+    "2002" varchar(25)   NOT NULL,
+    "2003" varchar(25)   NOT NULL,
+    "2004" varchar(25)   NOT NULL,
+    "2005" varchar(25)   NOT NULL,
+    "2006" varchar(25)   NOT NULL,
+    "2007" varchar(25)   NOT NULL,
+    "2008" varchar(25)   NOT NULL,
+    "2009" varchar(25)   NOT NULL,
+    "2010" varchar(25)   NOT NULL,
+    "2011" varchar(25)   NOT NULL,
+    "2012" varchar(25)   NOT NULL,
+    "2013" varchar(25)   NOT NULL,
+    "2014" varchar(25)   NOT NULL,
+    "2015" varchar(25)   NOT NULL,
+    "2016" varchar(25)   NOT NULL,
+    "2017" varchar(25)   NOT NULL,
+	"Energy_Type" varchar(50) not null
+);
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:16:40</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:14:39">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  drop table "State_Sources";
+CREATE TABLE "State_Sources" (
+	"State" varchar(6)   NOT NULL,
+	"MSN" varchar(20) not null,
+	"Energy_Type" varchar(50) not null,
+    "1960" varchar(25)   NOT NULL,
+    "1961" varchar(25)   NOT NULL,
+    "1962" varchar(25)   NOT NULL,
+    "1963" varchar(25)   NOT NULL,
+    "1964" varchar(25)   NOT NULL,
+    "1965" varchar(25)   NOT NULL,
+    "1966" varchar(25)   NOT NULL,
+    "1967" varchar(25)   NOT NULL,
+    "1968" varchar(25)   NOT NULL,
+    "1969" varchar(25)   NOT NULL,
+    "1970" varchar(25)   NOT NULL,
+    "1971" varchar(25)   NOT NULL,
+    "1972" varchar(25)   NOT NULL,
+    "1973" varchar(25)   NOT NULL,
+    "1974" varchar(25)   NOT NULL,
+    "1975" varchar(25)   NOT NULL,
+    "1976" varchar(25)   NOT NULL,
+    "1977" varchar(25)   NOT NULL,
+    "1978" varchar(25)   NOT NULL,
+    "1979" varchar(25)   NOT NULL,
+    "1980" varchar(25)   NOT NULL,
+    "1981" varchar(25)   NOT NULL,
+    "1982" varchar(25)   NOT NULL,
+    "1983" varchar(25)   NOT NULL,
+    "1984" varchar(25)   NOT NULL,
+    "1985" varchar(25)   NOT NULL,
+    "1986" varchar(25)   NOT NULL,
+    "1987" varchar(25)   NOT NULL,
+    "1988" varchar(25)   NOT NULL,
+    "1989" varchar(25)   NOT NULL,
+    "1990" varchar(25)   NOT NULL,
+    "1991" varchar(25)   NOT NULL,
+    "1992" varchar(25)   NOT NULL,
+    "1993" varchar(25)   NOT NULL,
+    "1994" varchar(25)   NOT NULL,
+    "1995" varchar(25)   NOT NULL,
+    "1996" varchar(25)   NOT NULL,
+    "1997" varchar(25)   NOT NULL,
+    "1998" varchar(25)   NOT NULL,
+    "1999" varchar(25)   NOT NULL,
+    "2000" varchar(25)   NOT NULL,
+    "2001" varchar(25)   NOT NULL,
+    "2002" varchar(25)   NOT NULL,
+    "2003" varchar(25)   NOT NULL,
+    "2004" varchar(25)   NOT NULL,
+    "2005" varchar(25)   NOT NULL,
+    "2006" varchar(25)   NOT NULL,
+    "2007" varchar(25)   NOT NULL,
+    "2008" varchar(25)   NOT NULL,
+    "2009" varchar(25)   NOT NULL,
+    "2010" varchar(25)   NOT NULL,
+    "2011" varchar(25)   NOT NULL,
+    "2012" varchar(25)   NOT NULL,
+    "2013" varchar(25)   NOT NULL,
+    "2014" varchar(25)   NOT NULL,
+    "2015" varchar(25)   NOT NULL,
+    "2016" varchar(25)   NOT NULL,
+    "2017" varchar(25)   NOT NULL
+);
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:14:39</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:11:45">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  select * from "State_Sources";
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:11:45</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:11:13">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  select * from "Residential_Sector";
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:11:13</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:10:29">
+          <div class="entry error">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  select * from Residential_Sector;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:10:29</div>
+              </div>
+          </div>
+      </li></ul>
+        </div><div class="query-group" data-key="2020 04 08">
+            <div class="date-label">4/8/2020</div>
+            <ul class="query-entries"><li class="list-item" tabindex="0" data-key="21:59:42">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  drop table "US_Sources";
+CREATE TABLE "US_Sources" (
+	"State" varchar(6)   NOT NULL,
+	"MSN" varchar(20) not null,
+	"Energy_Type" varchar(50) not null,
+    "1960" varchar(25)   NOT NULL,
+    "1961" varchar(25)   NOT NULL,
+    "1962" varchar(25)   NOT NULL,
+    "1963" varchar(25)   NOT NULL,
+    "1964" varchar(25)   NOT NULL,
+    "1965" varchar(25)   NOT NULL,
+    "1966" varchar(25)   NOT NULL,
+    "1967" varchar(25)   NOT NULL,
+    "1968" varchar(25)   NOT NULL,
+    "1969" varchar(25)   NOT NULL,
+    "1970" varchar(25)   NOT NULL,
+    "1971" varchar(25)   NOT NULL,
+    "1972" varchar(25)   NOT NULL,
+    "1973" varchar(25)   NOT NULL,
+    "1974" varchar(25)   NOT NULL,
+    "1975" varchar(25)   NOT NULL,
+    "1976" varchar(25)   NOT NULL,
+    "1977" varchar(25)   NOT NULL,
+    "1978" varchar(25)   NOT NULL,
+    "1979" varchar(25)   NOT NULL,
+    "1980" varchar(25)   NOT NULL,
+    "1981" varchar(25)   NOT NULL,
+    "1982" varchar(25)   NOT NULL,
+    "1983" varchar(25)   NOT NULL,
+    "1984" varchar(25)   NOT NULL,
+    "1985" varchar(25)   NOT NULL,
+    "1986" varchar(25)   NOT NULL,
+    "1987" varchar(25)   NOT NULL,
+    "1988" varchar(25)   NOT NULL,
+    "1989" varchar(25)   NOT NULL,
+    "1990" varchar(25)   NOT NULL,
+    "1991" varchar(25)   NOT NULL,
+    "1992" varchar(25)   NOT NULL,
+    "1993" varchar(25)   NOT NULL,
+    "1994" varchar(25)   NOT NULL,
+    "1995" varchar(25)   NOT NULL,
+    "1996" varchar(25)   NOT NULL,
+    "1997" varchar(25)   NOT NULL,
+    "1998" varchar(25)   NOT NULL,
+    "1999" varchar(25)   NOT NULL,
+    "2000" varchar(25)   NOT NULL,
+    "2001" varchar(25)   NOT NULL,
+    "2002" varchar(25)   NOT NULL,
+    "2003" varchar(25)   NOT NULL,
+    "2004" varchar(25)   NOT NULL,
+    "2005" varchar(25)   NOT NULL,
+    "2006" varchar(25)   NOT NULL,
+    "2007" varchar(25)   NOT NULL,
+    "2008" varchar(25)   NOT NULL,
+    "2009" varchar(25)   NOT NULL,
+    "2010" varchar(25)   NOT NULL,
+    "2011" varchar(25)   NOT NULL,
+    "2012" varchar(25)   NOT NULL,
+    "2013" varchar(25)   NOT NULL,
+    "2014" varchar(25)   NOT NULL,
+    "2015" varchar(25)   NOT NULL,
+    "2016" varchar(25)   NOT NULL,
+    "2017" varchar(25)   NOT NULL
+);
+              </div>
+              <div class="other-info">
+              <div class="timestamp">21:59:42</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="21:55:36">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  drop table "US_Sources";
+CREATE TABLE "US_Sources" (
+	"State" varchar(6)   NOT NULL,
+	"MSN" varchar(20) not null,
+	"Energy_Type" varchar(50) not null,
+    "1960" int   NOT NULL,
+    "1961" int   NOT NULL,
+    "1962" int   NOT NULL,
+    "1963" int   NOT NULL,
+    "1964" int   NOT NULL,
+    "1965" int   NOT NULL,
+    "1966" int   NOT NULL,
+    "1967" int   NOT NULL,
+    "1968" int   NOT NULL,
+    "1969" int   NOT NULL,
+    "1970" int   NOT NULL,
+    "1971" int   NOT NULL,
+    "1972" int   NOT NULL,
+    "1973" int   NOT NULL,
+    "1974" int   NOT NULL,
+    "1975" int   NOT NULL,
+    "1976" int   NOT NULL,
+    "1977" int   NOT NULL,
+    "1978" int   NOT NULL,
+    "1979" int   NOT NULL,
+    "1980" int   NOT NULL,
+    "1981" int   NOT NULL,
+    "1982" int   NOT NULL,
+    "1983" int   NOT NULL,
+    "1984" int   NOT NULL,
+    "1985" int   NOT NULL,
+    "1986" int   NOT NULL,
+    "1987" int   NOT NULL,
+    "1988" int   NOT NULL,
+    "1989" int   NOT NULL,
+    "1990" int   NOT NULL,
+    "1991" int   NOT NULL,
+    "1992" int   NOT NULL,
+    "1993" int   NOT NULL,
+    "1994" int   NOT NULL,
+    "1995" int   NOT NULL,
+    "1996" int   NOT NULL,
+    "1997" int   NOT NULL,
+    "1998" int   NOT NULL,
+    "1999" int   NOT NULL,
+    "2000" int   NOT NULL,
+    "2001" int   NOT NULL,
+    "2002" int   NOT NULL,
+    "2003" int   NOT NULL,
+    "2004" int   NOT NULL,
+    "2005" int   NOT NULL,
+    "2006" int   NOT NULL,
+    "2007" int   NOT NULL,
+    "2008" int   NOT NULL,
+    "2009" int   NOT NULL,
+    "2010" int   NOT NULL,
+    "2011" int   NOT NULL,
+    "2012" int   NOT NULL,
+    "2013" int   NOT NULL,
+    "2014" int   NOT NULL,
+    "2015" int   NOT NULL,
+    "2016" int   NOT NULL,
+    "2017" int   NOT NULL	
+);
+              </div>
+              <div class="other-info">
+              <div class="timestamp">21:55:36</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="21:48:08">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  drop table "State_Sources";
+CREATE TABLE "State_Sources" (
+	"State" varchar(6)   NOT NULL,
+	"MSN" varchar(20) not null,
+	"Energy_Type" varchar(50) not null,
+    "1960" varchar(25)   NOT NULL,
+    "1961" varchar(25)   NOT NULL,
+    "1962" varchar(25)   NOT NULL,
+    "1963" varchar(25)   NOT NULL,
+    "1964" varchar(25)   NOT NULL,
+    "1965" varchar(25)   NOT NULL,
+    "1966" varchar(25)   NOT NULL,
+    "1967" varchar(25)   NOT NULL,
+    "1968" varchar(25)   NOT NULL,
+    "1969" varchar(25)   NOT NULL,
+    "1970" varchar(25)   NOT NULL,
+    "1971" varchar(25)   NOT NULL,
+    "1972" varchar(25)   NOT NULL,
+    "1973" varchar(25)   NOT NULL,
+    "1974" varchar(25)   NOT NULL,
+    "1975" varchar(25)   NOT NULL,
+    "1976" varchar(25)   NOT NULL,
+    "1977" varchar(25)   NOT NULL,
+    "1978" varchar(25)   NOT NULL,
+    "1979" varchar(25)   NOT NULL,
+    "1980" varchar(25)   NOT NULL,
+    "1981" varchar(25)   NOT NULL,
+    "1982" varchar(25)   NOT NULL,
+    "1983" varchar(25)   NOT NULL,
+    "1984" varchar(25)   NOT NULL,
+    "1985" varchar(25)   NOT NULL,
+    "1986" varchar(25)   NOT NULL,
+    "1987" varchar(25)   NOT NULL,
+    "1988" varchar(25)   NOT NULL,
+    "1989" varchar(25)   NOT NULL,
+    "1990" varchar(25)   NOT NULL,
+    "1991" varchar(25)   NOT NULL,
+    "1992" varchar(25)   NOT NULL,
+    "1993" varchar(25)   NOT NULL,
+    "1994" varchar(25)   NOT NULL,
+    "1995" varchar(25)   NOT NULL,
+    "1996" varchar(25)   NOT NULL,
+    "1997" varchar(25)   NOT NULL,
+    "1998" varchar(25)   NOT NULL,
+    "1999" varchar(25)   NOT NULL,
+    "2000" varchar(25)   NOT NULL,
+    "2001" varchar(25)   NOT NULL,
+    "2002" varchar(25)   NOT NULL,
+    "2003" varchar(25)   NOT NULL,
+    "2004" varchar(25)   NOT NULL,
+    "2005" varchar(25)   NOT NULL,
+    "2006" varchar(25)   NOT NULL,
+    "2007" varchar(25)   NOT NULL,
+    "2008" varchar(25)   NOT NULL,
+    "2009" varchar(25)   NOT NULL,
+    "2010" varchar(25)   NOT NULL,
+    "2011" varchar(25)   NOT NULL,
+    "2012" varchar(25)   NOT NULL,
+    "2013" varchar(25)   NOT NULL,
+    "2014" varchar(25)   NOT NULL,
+    "2015" varchar(25)   NOT NULL,
+    "2016" varchar(25)   NOT NULL,
+    "2017" varchar(25)   NOT NULL
+);
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">21:48:08</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="21:40:48">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  drop table "State_Sources";
+CREATE TABLE "State_Sources" (
+	"State" varchar(6)   NOT NULL,
+	"MSN" varchar(20) not null,
+    "1960" varchar(25)   NOT NULL,
+    "1961" varchar(25)   NOT NULL,
+    "1962" varchar(25)   NOT NULL,
+    "1963" varchar(25)   NOT NULL,
+    "1964" varchar(25)   NOT NULL,
+    "1965" varchar(25)   NOT NULL,
+    "1966" varchar(25)   NOT NULL,
+    "1967" varchar(25)   NOT NULL,
+    "1968" varchar(25)   NOT NULL,
+    "1969" varchar(25)   NOT NULL,
+    "1970" varchar(25)   NOT NULL,
+    "1971" varchar(25)   NOT NULL,
+    "1972" varchar(25)   NOT NULL,
+    "1973" varchar(25)   NOT NULL,
+    "1974" varchar(25)   NOT NULL,
+    "1975" varchar(25)   NOT NULL,
+    "1976" varchar(25)   NOT NULL,
+    "1977" varchar(25)   NOT NULL,
+    "1978" varchar(25)   NOT NULL,
+    "1979" varchar(25)   NOT NULL,
+    "1980" varchar(25)   NOT NULL,
+    "1981" varchar(25)   NOT NULL,
+    "1982" varchar(25)   NOT NULL,
+    "1983" varchar(25)   NOT NULL,
+    "1984" varchar(25)   NOT NULL,
+    "1985" varchar(25)   NOT NULL,
+    "1986" varchar(25)   NOT NULL,
+    "1987" varchar(25)   NOT NULL,
+    "1988" varchar(25)   NOT NULL,
+    "1989" varchar(25)   NOT NULL,
+    "1990" varchar(25)   NOT NULL,
+    "1991" varchar(25)   NOT NULL,
+    "1992" varchar(25)   NOT NULL,
+    "1993" varchar(25)   NOT NULL,
+    "1994" varchar(25)   NOT NULL,
+    "1995" varchar(25)   NOT NULL,
+    "1996" varchar(25)   NOT NULL,
+    "1997" varchar(25)   NOT NULL,
+    "1998" varchar(25)   NOT NULL,
+    "1999" varchar(25)   NOT NULL,
+    "2000" varchar(25)   NOT NULL,
+    "2001" varchar(25)   NOT NULL,
+    "2002" varchar(25)   NOT NULL,
+    "2003" varchar(25)   NOT NULL,
+    "2004" varchar(25)   NOT NULL,
+    "2005" varchar(25)   NOT NULL,
+    "2006" varchar(25)   NOT NULL,
+    "2007" varchar(25)   NOT NULL,
+    "2008" varchar(25)   NOT NULL,
+    "2009" varchar(25)   NOT NULL,
+    "2010" varchar(25)   NOT NULL,
+    "2011" varchar(25)   NOT NULL,
+    "2012" varchar(25)   NOT NULL,
+    "2013" varchar(25)   NOT NULL,
+    "2014" varchar(25)   NOT NULL,
+    "2015" varchar(25)   NOT NULL,
+    "2016" varchar(25)   NOT NULL,
+    "2017" varchar(25)   NOT NULL,
+	"Energy_Type" varchar(50) not null
+);
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">21:40:48</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="21:20:27">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  drop table "State_Sources";
+CREATE TABLE "State_Sources" (
+	"State" varchar(6)   NOT NULL,
+	"MSN" varchar(20) not null,
+    "1960" int   NOT NULL,
+    "1961" int   NOT NULL,
+    "1962" int   NOT NULL,
+    "1963" int   NOT NULL,
+    "1964" int   NOT NULL,
+    "1965" int   NOT NULL,
+    "1966" int   NOT NULL,
+    "1967" int   NOT NULL,
+    "1968" int   NOT NULL,
+    "1969" int   NOT NULL,
+    "1970" int   NOT NULL,
+    "1971" int   NOT NULL,
+    "1972" int   NOT NULL,
+    "1973" int   NOT NULL,
+    "1974" int   NOT NULL,
+    "1975" int   NOT NULL,
+    "1976" int   NOT NULL,
+    "1977" int   NOT NULL,
+    "1978" int   NOT NULL,
+    "1979" int   NOT NULL,
+    "1980" int   NOT NULL,
+    "1981" int   NOT NULL,
+    "1982" int   NOT NULL,
+    "1983" int   NOT NULL,
+    "1984" int   NOT NULL,
+    "1985" int   NOT NULL,
+    "1986" int   NOT NULL,
+    "1987" int   NOT NULL,
+    "1988" int   NOT NULL,
+    "1989" int   NOT NULL,
+    "1990" int   NOT NULL,
+    "1991" int   NOT NULL,
+    "1992" int   NOT NULL,
+    "1993" int   NOT NULL,
+    "1994" int   NOT NULL,
+    "1995" int   NOT NULL,
+    "1996" int   NOT NULL,
+    "1997" int   NOT NULL,
+    "1998" int   NOT NULL,
+    "1999" int   NOT NULL,
+    "2000" int   NOT NULL,
+    "2001" int   NOT NULL,
+    "2002" int   NOT NULL,
+    "2003" int   NOT NULL,
+    "2004" int   NOT NULL,
+    "2005" int   NOT NULL,
+    "2006" int   NOT NULL,
+    "2007" int   NOT NULL,
+    "2008" int   NOT NULL,
+    "2009" int   NOT NULL,
+    "2010" int   NOT NULL,
+    "2011" int   NOT NULL,
+    "2012" int   NOT NULL,
+    "2013" int   NOT NULL,
+    "2014" int   NOT NULL,
+    "2015" int   NOT NULL,
+    "2016" int   NOT NULL,
+    "2017" int   NOT NULL,
+	"Energy_Type" varchar(50) not null
+);
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">21:20:27</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="21:19:58">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  drop table "US_Sources";
+CREATE TABLE "US_Sources" (
+	"State" varchar(6)   NOT NULL,
+	"MSN" varchar(20) not null,
+    "1960" int   NOT NULL,
+    "1961" int   NOT NULL,
+    "1962" int   NOT NULL,
+    "1963" int   NOT NULL,
+    "1964" int   NOT NULL,
+    "1965" int   NOT NULL,
+    "1966" int   NOT NULL,
+    "1967" int   NOT NULL,
+    "1968" int   NOT NULL,
+    "1969" int   NOT NULL,
+    "1970" int   NOT NULL,
+    "1971" int   NOT NULL,
+    "1972" int   NOT NULL,
+    "1973" int   NOT NULL,
+    "1974" int   NOT NULL,
+    "1975" int   NOT NULL,
+    "1976" int   NOT NULL,
+    "1977" int   NOT NULL,
+    "1978" int   NOT NULL,
+    "1979" int   NOT NULL,
+    "1980" int   NOT NULL,
+    "1981" int   NOT NULL,
+    "1982" int   NOT NULL,
+    "1983" int   NOT NULL,
+    "1984" int   NOT NULL,
+    "1985" int   NOT NULL,
+    "1986" int   NOT NULL,
+    "1987" int   NOT NULL,
+    "1988" int   NOT NULL,
+    "1989" int   NOT NULL,
+    "1990" int   NOT NULL,
+    "1991" int   NOT NULL,
+    "1992" int   NOT NULL,
+    "1993" int   NOT NULL,
+    "1994" int   NOT NULL,
+    "1995" int   NOT NULL,
+    "1996" int   NOT NULL,
+    "1997" int   NOT NULL,
+    "1998" int   NOT NULL,
+    "1999" int   NOT NULL,
+    "2000" int   NOT NULL,
+    "2001" int   NOT NULL,
+    "2002" int   NOT NULL,
+    "2003" int   NOT NULL,
+    "2004" int   NOT NULL,
+    "2005" int   NOT NULL,
+    "2006" int   NOT NULL,
+    "2007" int   NOT NULL,
+    "2008" int   NOT NULL,
+    "2009" int   NOT NULL,
+    "2010" int   NOT NULL,
+    "2011" int   NOT NULL,
+    "2012" int   NOT NULL,
+    "2013" int   NOT NULL,
+    "2014" int   NOT NULL,
+    "2015" int   NOT NULL,
+    "2016" int   NOT NULL,
+    "2017" int   NOT NULL,
+	"Energy_Type" varchar(50) not null
+	
+);
+              </div>
+              <div class="other-info">
+              <div class="timestamp">21:19:58</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="21:02:39">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  drop table "State_Sources";
+CREATE TABLE "State_Sources" (
+	"State" varchar(6)   NOT NULL,
+	"MSN" varchar(20) not null,
+	"Energy_Type" varchar(50) not null,
+    "1960" int   NOT NULL,
+    "1961" int   NOT NULL,
+    "1962" int   NOT NULL,
+    "1963" int   NOT NULL,
+    "1964" int   NOT NULL,
+    "1965" int   NOT NULL,
+    "1966" int   NOT NULL,
+    "1967" int   NOT NULL,
+    "1968" int   NOT NULL,
+    "1969" int   NOT NULL,
+    "1970" int   NOT NULL,
+    "1971" int   NOT NULL,
+    "1972" int   NOT NULL,
+    "1973" int   NOT NULL,
+    "1974" int   NOT NULL,
+    "1975" int   NOT NULL,
+    "1976" int   NOT NULL,
+    "1977" int   NOT NULL,
+    "1978" int   NOT NULL,
+    "1979" int   NOT NULL,
+    "1980" int   NOT NULL,
+    "1981" int   NOT NULL,
+    "1982" int   NOT NULL,
+    "1983" int   NOT NULL,
+    "1984" int   NOT NULL,
+    "1985" int   NOT NULL,
+    "1986" int   NOT NULL,
+    "1987" int   NOT NULL,
+    "1988" int   NOT NULL,
+    "1989" int   NOT NULL,
+    "1990" int   NOT NULL,
+    "1991" int   NOT NULL,
+    "1992" int   NOT NULL,
+    "1993" int   NOT NULL,
+    "1994" int   NOT NULL,
+    "1995" int   NOT NULL,
+    "1996" int   NOT NULL,
+    "1997" int   NOT NULL,
+    "1998" int   NOT NULL,
+    "1999" int   NOT NULL,
+    "2000" int   NOT NULL,
+    "2001" int   NOT NULL,
+    "2002" int   NOT NULL,
+    "2003" int   NOT NULL,
+    "2004" int   NOT NULL,
+    "2005" int   NOT NULL,
+    "2006" int   NOT NULL,
+    "2007" int   NOT NULL,
+    "2008" int   NOT NULL,
+    "2009" int   NOT NULL,
+    "2010" int   NOT NULL,
+    "2011" int   NOT NULL,
+    "2012" int   NOT NULL,
+    "2013" int   NOT NULL,
+    "2014" int   NOT NULL,
+    "2015" int   NOT NULL,
+    "2016" int   NOT NULL,
+    "2017" int   NOT NULL
+	
+);
+              </div>
+              <div class="other-info">
+              <div class="timestamp">21:02:39</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:56:55">
+          <div class="entry ">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  drop table "US_Sources";
+CREATE TABLE "US_Sources" (
+	"State" varchar(6)   NOT NULL,
+	"MSN" varchar(20) not null,
+    "1960" int   NOT NULL,
+    "1961" int   NOT NULL,
+    "1962" int   NOT NULL,
+    "1963" int   NOT NULL,
+    "1964" int   NOT NULL,
+    "1965" int   NOT NULL,
+    "1966" int   NOT NULL,
+    "1967" int   NOT NULL,
+    "1968" int   NOT NULL,
+    "1969" int   NOT NULL,
+    "1970" int   NOT NULL,
+    "1971" int   NOT NULL,
+    "1972" int   NOT NULL,
+    "1973" int   NOT NULL,
+    "1974" int   NOT NULL,
+    "1975" int   NOT NULL,
+    "1976" int   NOT NULL,
+    "1977" int   NOT NULL,
+    "1978" int   NOT NULL,
+    "1979" int   NOT NULL,
+    "1980" int   NOT NULL,
+    "1981" int   NOT NULL,
+    "1982" int   NOT NULL,
+    "1983" int   NOT NULL,
+    "1984" int   NOT NULL,
+    "1985" int   NOT NULL,
+    "1986" int   NOT NULL,
+    "1987" int   NOT NULL,
+    "1988" int   NOT NULL,
+    "1989" int   NOT NULL,
+    "1990" int   NOT NULL,
+    "1991" int   NOT NULL,
+    "1992" int   NOT NULL,
+    "1993" int   NOT NULL,
+    "1994" int   NOT NULL,
+    "1995" int   NOT NULL,
+    "1996" int   NOT NULL,
+    "1997" int   NOT NULL,
+    "1998" int   NOT NULL,
+    "1999" int   NOT NULL,
+    "2000" int   NOT NULL,
+    "2001" int   NOT NULL,
+    "2002" int   NOT NULL,
+    "2003" int   NOT NULL,
+    "2004" int   NOT NULL,
+    "2005" int   NOT NULL,
+    "2006" int   NOT NULL,
+    "2007" int   NOT NULL,
+    "2008" int   NOT NULL,
+    "2009" int   NOT NULL,
+    "2010" int   NOT NULL,
+    "2011" int   NOT NULL,
+    "2012" int   NOT NULL,
+    "2013" int   NOT NULL,
+    "2014" int   NOT NULL,
+    "2015" int   NOT NULL,
+    "2016" int   NOT NULL,
+    "2017" int   NOT NULL,
+	"Energy_Type" varchar(50) not null
+);
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:56:55</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="20:46:38">
+          <div class="entry error">
+              <div class="query">
+                  <i id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-bolt"></i>
+                  select * from Residential_Sector;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">20:46:38</div>
+              </div>
+          </div>
+      </li></ul>
+        </div></div>
+        </div></div><div class="gutter gutter-horizontal" style="width: 1px;"></div><div style="width: calc(50% - 0.5px);"><div id="query_detail" class="query-detail">
+            <div class="error-message-block d-none"></div>
+            <div class="info-message-block d-none"></div>
+            <div class="metadata-block"><div class="metadata">
+                <div class="item">
+                  <span class="value">4/14/2020 1:21:55 PM</span>
+                  <span class="description">Date</span>
+              </div>
+                <div class="item">
+                  <span class="value">624</span>
+                  <span class="description">Rows Affected</span>
+              </div>
+                <div class="item">
+                  <span class="value">111 msec</span>
+                  <span class="description">Duration</span>
+              </div>
+            </div></div>
+            <div class="query-statement-block">
+              <div id="history-detail-query">
+                <button class="btn-copy copy-all" tabindex="0" accesskey="y">Copy</button>
+                <button class="btn-copy-editor copy-to-editor" tabindex="0" accesskey="y">Copy to Query Editor</button>
+                <div><div class="CodeMirror cm-s-default" style="font-size: 1em;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="-1" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="display: block; bottom: 0px;"><div style="min-width: 1px; height: 31px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true" style="display: block; right: 0px; left: 0px;"><div style="height: 100%; min-height: 1px; width: 33px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; min-width: 3px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">select</span> <span class="cm-operator">*</span> <span class="cm-keyword">from</span> "State_Sources"<span class="cm-punctuation">;</span></span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation"></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent;"></div><div class="CodeMirror-gutters" style="display: none;"></div></div></div></div>
+              </div>
+            </div>
+            <div>
+              <hr class="block-divider">
+            </div>
+            <div class="message-block">
+              <div class="message">
+                <div class="message-header">Messages</div>
+                <div class="content"><pre class="content-value">Successfully run. Total query runtime: 111 msec.
+624 rows affected.</pre></div>
+              </div>
+            </div>
+        </div></div></div></div></td></tr></tbody></table></div></div></div></div><div class="wcLayoutPane" style="right: 0px; width: 252.25px; top: 0px; bottom: 0px;"><div class="wcFrame wcWide wcTall"><div class="wcFrameTitleBar wcTabTop" style="width: 252.25px;"><div class="wcFrameTitle"><a href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="-1" class="panel-link-heading">Scratch Pad</a></div><div class="wcTabScroller" style="left: 0px;"></div><div class="wcFrameButtonBar" style="min-width: 0px; width: 0px; right: 24px;"></div></div><div class="wcFrameButtonBar" style="min-width: 24px; width: 24px;"><div class="wcFrameButton" title="Close the currently active panel tab" style=""><div class="fa fa-close"></div></div><div class="wcFrameButton" title="Collapse the active panel" style="display: none;"><div class="fa fa-download"></div>C</div></div><div class="wcFrameCenter wcPanelBackground wcScrollableX wcScrollableY" style="left: 0px; right: 0px; bottom: 0px;"><div class="wcPanelTabContent" id="0"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content"><div class="sql-scratch"><textarea wrap="off" tabindex="0"></textarea></div></div></td></tr></tbody></table></div></div></div></div><div class="wcSplitterBar wcTall wcSplitterBarV" style="left: 765.75px; top: 0px; height: 258px;"><div class="wcSplitterBarLine"></div></div></div><div class="wcLayoutPane" style="bottom: 0px; height: 252px; left: 0px; right: 0px;"><div class="wcFrame wcWide wcTall"><div class="wcFrameTitleBar wcTabTop" style="width: 1022px;"><div class="wcTabScroller" style="left: 0px;"><div class="wcPanelTab wcPanelTabActive" id="0"><div><a href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="-1" class="panel-link-heading">Data Output</a></div></div><div class="wcPanelTab" id="1"><div><a href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="-1" class="panel-link-heading">Explain</a></div></div><div class="wcPanelTab" id="2"><div><a href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="-1" class="panel-link-heading">Messages</a></div></div><div class="wcPanelTab" id="3"><div><a href="http://127.0.0.1:49315/datagrid/panel/6596331?is_query_tool=true&amp;sgid=1&amp;sid=1&amp;server_type=pg&amp;did=24576#" tabindex="-1" class="panel-link-heading">Notifications</a></div></div></div><div class="wcFrameButtonBar" style="min-width: 0px; width: 0px; right: 0px;"></div></div><div class="wcFrameButtonBar" style="min-width: 0px; width: 0px;"><div class="wcFrameButton" title="Close the currently active panel tab" style="display: none;"><div class="fa fa-close"></div></div><div class="wcFrameButton" title="Collapse the active panel" style="display: none;"><div class="fa fa-download"></div>C</div></div><div class="wcFrameCenter wcPanelBackground wcScrollableX wcScrollableY" style="left: 0px; right: 0px; bottom: 0px;"><div class="wcPanelTabContent" id="0"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content hide-vertical-scrollbar"><div id="datagrid" class="sql-editor-grid-container text-12 ui-widget slickgrid_149452" tabindex="0" style="height: 225.5px; overflow: hidden; outline: 0px; position: relative;"><div tabindex="0" hidefocus="" style="position:fixed;width:0;height:0;top:0;left:0;outline:0;"></div><div class="slick-header ui-state-default"><div class="slick-header-columns" style="left: -1000px; width: 6076px;" unselectable="on"><div class="ui-state-default slick-header-column" id="slickgrid_149452row-header-column" title="" style="width: 40px;"><span class="slick-column-name"><span data-id="select-all" title="Select/Deselect All"><br><img class="select-all-icon" src="./select-all-icon.png"></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_149452State" title="Read-only column" style="width: 156px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="State">  <span class="column-description">    <span class="column-name">State</span>    <span class="column-type">character varying (6)</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_149452MSN" title="Read-only column" style="width: 164px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="MSN">  <span class="column-description">    <span class="column-name">MSN</span>    <span class="column-type">character varying (20)</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521960" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1960">  <span class="column-description">    <span class="column-name">1960</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521961" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1961">  <span class="column-description">    <span class="column-name">1961</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521962" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1962">  <span class="column-description">    <span class="column-name">1962</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521963" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1963">  <span class="column-description">    <span class="column-name">1963</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521964" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1964">  <span class="column-description">    <span class="column-name">1964</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521965" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1965">  <span class="column-description">    <span class="column-name">1965</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521966" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1966">  <span class="column-description">    <span class="column-name">1966</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521967" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1967">  <span class="column-description">    <span class="column-name">1967</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521968" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1968">  <span class="column-description">    <span class="column-name">1968</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521969" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1969">  <span class="column-description">    <span class="column-name">1969</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521970" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1970">  <span class="column-description">    <span class="column-name">1970</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521971" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1971">  <span class="column-description">    <span class="column-name">1971</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521972" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1972">  <span class="column-description">    <span class="column-name">1972</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521973" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1973">  <span class="column-description">    <span class="column-name">1973</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521974" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1974">  <span class="column-description">    <span class="column-name">1974</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521975" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1975">  <span class="column-description">    <span class="column-name">1975</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521976" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1976">  <span class="column-description">    <span class="column-name">1976</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521977" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1977">  <span class="column-description">    <span class="column-name">1977</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521978" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1978">  <span class="column-description">    <span class="column-name">1978</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521979" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1979">  <span class="column-description">    <span class="column-name">1979</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521980" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1980">  <span class="column-description">    <span class="column-name">1980</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521981" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1981">  <span class="column-description">    <span class="column-name">1981</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521982" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1982">  <span class="column-description">    <span class="column-name">1982</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521983" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1983">  <span class="column-description">    <span class="column-name">1983</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521984" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1984">  <span class="column-description">    <span class="column-name">1984</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521985" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1985">  <span class="column-description">    <span class="column-name">1985</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521986" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1986">  <span class="column-description">    <span class="column-name">1986</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521987" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1987">  <span class="column-description">    <span class="column-name">1987</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521988" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1988">  <span class="column-description">    <span class="column-name">1988</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521989" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1989">  <span class="column-description">    <span class="column-name">1989</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521990" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1990">  <span class="column-description">    <span class="column-name">1990</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521991" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1991">  <span class="column-description">    <span class="column-name">1991</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521992" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1992">  <span class="column-description">    <span class="column-name">1992</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521993" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1993">  <span class="column-description">    <span class="column-name">1993</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521994" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1994">  <span class="column-description">    <span class="column-name">1994</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521995" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1995">  <span class="column-description">    <span class="column-name">1995</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521996" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1996">  <span class="column-description">    <span class="column-name">1996</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521997" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1997">  <span class="column-description">    <span class="column-name">1997</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521998" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1998">  <span class="column-description">    <span class="column-name">1998</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494521999" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="1999">  <span class="column-description">    <span class="column-name">1999</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494522000" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="2000">  <span class="column-description">    <span class="column-name">2000</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494522001" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="2001">  <span class="column-description">    <span class="column-name">2001</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494522002" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="2002">  <span class="column-description">    <span class="column-name">2002</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494522003" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="2003">  <span class="column-description">    <span class="column-name">2003</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494522004" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="2004">  <span class="column-description">    <span class="column-name">2004</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494522005" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="2005">  <span class="column-description">    <span class="column-name">2005</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494522006" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="2006">  <span class="column-description">    <span class="column-name">2006</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494522007" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="2007">  <span class="column-description">    <span class="column-name">2007</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494522008" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="2008">  <span class="column-description">    <span class="column-name">2008</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494522009" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="2009">  <span class="column-description">    <span class="column-name">2009</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494522010" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="2010">  <span class="column-description">    <span class="column-name">2010</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494522011" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="2011">  <span class="column-description">    <span class="column-name">2011</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494522012" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="2012">  <span class="column-description">    <span class="column-name">2012</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494522013" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="2013">  <span class="column-description">    <span class="column-name">2013</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494522014" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="2014">  <span class="column-description">    <span class="column-name">2014</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494522015" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="2015">  <span class="column-description">    <span class="column-name">2015</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494522016" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="2016">  <span class="column-description">    <span class="column-name">2016</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_1494522017" title="Read-only column" style="width: 71px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="2017">  <span class="column-description">    <span class="column-name">2017</span>    <span class="column-type">integer</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_149452Energy_Type" title="Read-only column" style="width: 164px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-lock"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="Energy_Type">  <span class="column-description">    <span class="column-name">Energy_Type</span>    <span class="column-type">character varying (50)</span>  </span></span></span><div class="slick-resizable-handle"></div></div></div></div><div class="slick-headerrow ui-state-default" style="display: none;"><div class="slick-headerrow-columns" style="width: 5076px;"></div><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 5076px;"></div></div><div class="slick-top-panel-scroller ui-state-default" style="display: none;"><div class="slick-top-panel" style="width:10000px"></div></div><div class="slick-viewport" style="width: 100%; overflow: auto; outline: 0px; position: relative; height: 185.5px;"><div class="grid-canvas" style="height: 15600px; width: 5076px;"><div class="ui-widget-content slick-row even" style="top:1100px"><div class="slick-cell l0 r0"><span data-row="44" data-cell-type="row-header-selector">45</span></div><div class="slick-cell l1 r1">AZ</div><div class="slick-cell l2 r2">NUETB</div><div class="slick-cell l3 r3"><span style="float:right">0</span></div><div class="slick-cell l4 r4"><span style="float:right">0</span></div><div class="slick-cell l5 r5"><span style="float:right">0</span></div><div class="slick-cell l6 r6"><span style="float:right">0</span></div><div class="slick-cell l7 r7"><span style="float:right">0</span></div><div class="slick-cell l8 r8"><span style="float:right">0</span></div><div class="slick-cell l9 r9"><span style="float:right">0</span></div><div class="slick-cell l10 r10"><span style="float:right">0</span></div><div class="slick-cell l11 r11"><span style="float:right">0</span></div><div class="slick-cell l12 r12"><span style="float:right">0</span></div><div class="slick-cell l13 r13"><span style="float:right">0</span></div><div class="slick-cell l14 r14"><span style="float:right">0</span></div><div class="slick-cell l15 r15"><span style="float:right">0</span></div><div class="slick-cell l16 r16"><span style="float:right">0</span></div><div class="slick-cell l17 r17"><span style="float:right">0</span></div><div class="slick-cell l18 r18"><span style="float:right">0</span></div><div class="slick-cell l19 r19"><span style="float:right">0</span></div><div class="slick-cell l20 r20"><span style="float:right">0</span></div><div class="slick-cell l21 r21"><span style="float:right">0</span></div><div class="slick-cell l22 r22"><span style="float:right">0</span></div><div class="slick-cell l23 r23"><span style="float:right">0</span></div><div class="slick-cell l24 r24"><span style="float:right">0</span></div></div><div class="ui-widget-content slick-row odd" style="top:1125px"><div class="slick-cell l0 r0"><span data-row="45" data-cell-type="row-header-selector">46</span></div><div class="slick-cell l1 r1" title="">AZ</div><div class="slick-cell l2 r2">P1TCB</div><div class="slick-cell l3 r3"><span style="float:right">11288</span></div><div class="slick-cell l4 r4"><span style="float:right">10429</span></div><div class="slick-cell l5 r5"><span style="float:right">11350</span></div><div class="slick-cell l6 r6"><span style="float:right">13364</span></div><div class="slick-cell l7 r7"><span style="float:right">12682</span></div><div class="slick-cell l8 r8"><span style="float:right">11770</span></div><div class="slick-cell l9 r9"><span style="float:right">17282</span></div><div class="slick-cell l10 r10"><span style="float:right">18093</span></div><div class="slick-cell l11 r11"><span style="float:right">19619</span></div><div class="slick-cell l12 r12"><span style="float:right">22399</span></div><div class="slick-cell l13 r13"><span style="float:right">29593</span></div><div class="slick-cell l14 r14"><span style="float:right">24664</span></div><div class="slick-cell l15 r15"><span style="float:right">29007</span></div><div class="slick-cell l16 r16"><span style="float:right">28613</span></div><div class="slick-cell l17 r17"><span style="float:right">32973</span></div><div class="slick-cell l18 r18"><span style="float:right">21573</span></div><div class="slick-cell l19 r19"><span style="float:right">20716</span></div><div class="slick-cell l20 r20"><span style="float:right">23626</span></div><div class="slick-cell l21 r21"><span style="float:right">26824</span></div><div class="slick-cell l22 r22"><span style="float:right">26665</span></div><div class="slick-cell l23 r23"><span style="float:right">19640</span></div><div class="slick-cell l24 r24"><span style="float:right">16335</span></div></div><div class="ui-widget-content slick-row even" style="top:1150px"><div class="slick-cell l0 r0"><span data-row="46" data-cell-type="row-header-selector">47</span></div><div class="slick-cell l1 r1" title="">AZ</div><div class="slick-cell l2 r2">RETCB</div><div class="slick-cell l3 r3"><span style="float:right">36181</span></div><div class="slick-cell l4 r4"><span style="float:right">35083</span></div><div class="slick-cell l5 r5"><span style="float:right">34533</span></div><div class="slick-cell l6 r6"><span style="float:right">34861</span></div><div class="slick-cell l7 r7"><span style="float:right">34271</span></div><div class="slick-cell l8 r8"><span style="float:right">50095</span></div><div class="slick-cell l9 r9"><span style="float:right">58060</span></div><div class="slick-cell l10 r10"><span style="float:right">56423</span></div><div class="slick-cell l11 r11"><span style="float:right">63456</span></div><div class="slick-cell l12 r12"><span style="float:right">67840</span></div><div class="slick-cell l13 r13"><span style="float:right">68919</span></div><div class="slick-cell l14 r14"><span style="float:right">74136</span></div><div class="slick-cell l15 r15"><span style="float:right">75189</span></div><div class="slick-cell l16 r16"><span style="float:right">79348</span></div><div class="slick-cell l17 r17"><span style="float:right">82058</span></div><div class="slick-cell l18 r18"><span style="float:right">80897</span></div><div class="slick-cell l19 r19"><span style="float:right">84428</span></div><div class="slick-cell l20 r20"><span style="float:right">75681</span></div><div class="slick-cell l21 r21"><span style="float:right">79870</span></div><div class="slick-cell l22 r22"><span style="float:right">83414</span></div><div class="slick-cell l23 r23"><span style="float:right">120006</span></div><div class="slick-cell l24 r24"><span style="float:right">92583</span></div></div><div class="ui-widget-content slick-row odd" style="top:1175px"><div class="slick-cell l0 r0"><span data-row="47" data-cell-type="row-header-selector">48</span></div><div class="slick-cell l1 r1" title="">AZ</div><div class="slick-cell l2 r2">RFTCB</div><div class="slick-cell l3 r3"><span style="float:right">785</span></div><div class="slick-cell l4 r4"><span style="float:right">597</span></div><div class="slick-cell l5 r5"><span style="float:right">926</span></div><div class="slick-cell l6 r6"><span style="float:right">713</span></div><div class="slick-cell l7 r7"><span style="float:right">1310</span></div><div class="slick-cell l8 r8"><span style="float:right">513</span></div><div class="slick-cell l9 r9"><span style="float:right">432</span></div><div class="slick-cell l10 r10"><span style="float:right">566</span></div><div class="slick-cell l11 r11"><span style="float:right">740</span></div><div class="slick-cell l12 r12"><span style="float:right">1020</span></div><div class="slick-cell l13 r13"><span style="float:right">663</span></div><div class="slick-cell l14 r14"><span style="float:right">3357</span></div><div class="slick-cell l15 r15"><span style="float:right">10070</span></div><div class="slick-cell l16 r16"><span style="float:right">46094</span></div><div class="slick-cell l17 r17"><span style="float:right">51505</span></div><div class="slick-cell l18 r18"><span style="float:right">37358</span></div><div class="slick-cell l19 r19"><span style="float:right">35575</span></div><div class="slick-cell l20 r20"><span style="float:right">48948</span></div><div class="slick-cell l21 r21"><span style="float:right">31180</span></div><div class="slick-cell l22 r22"><span style="float:right">30968</span></div><div class="slick-cell l23 r23"><span style="float:right">8419</span></div><div class="slick-cell l24 r24"><span style="float:right">1629</span></div></div><div class="ui-widget-content slick-row even" style="top:1200px"><div class="slick-cell l0 r0"><span data-row="48" data-cell-type="row-header-selector">49</span></div><div class="slick-cell l1 r1" title="">CA</div><div class="slick-cell l2 r2" title="">BMTCB</div><div class="slick-cell l3 r3" title=""><span style="float:right">82098</span></div><div class="slick-cell l4 r4"><span style="float:right">83506</span></div><div class="slick-cell l5 r5"><span style="float:right">86898</span></div><div class="slick-cell l6 r6"><span style="float:right">93022</span></div><div class="slick-cell l7 r7"><span style="float:right">98436</span></div><div class="slick-cell l8 r8"><span style="float:right">97488</span></div><div class="slick-cell l9 r9"><span style="float:right">100673</span></div><div class="slick-cell l10 r10"><span style="float:right">101885</span></div><div class="slick-cell l11 r11"><span style="float:right">110274</span></div><div class="slick-cell l12 r12"><span style="float:right">116253</span></div><div class="slick-cell l13 r13"><span style="float:right">116839</span></div><div class="slick-cell l14 r14"><span style="float:right">119221</span></div><div class="slick-cell l15 r15"><span style="float:right">127646</span></div><div class="slick-cell l16 r16"><span style="float:right">130122</span></div><div class="slick-cell l17 r17"><span style="float:right">134723</span></div><div class="slick-cell l18 r18"><span style="float:right">127489</span></div><div class="slick-cell l19 r19"><span style="float:right">144760</span></div><div class="slick-cell l20 r20"><span style="float:right">151984</span></div><div class="slick-cell l21 r21"><span style="float:right">160261</span></div><div class="slick-cell l22 r22"><span style="float:right">168373</span></div><div class="slick-cell l23 r23"><span style="float:right">115610</span></div><div class="slick-cell l24 r24"><span style="float:right">133092</span></div></div><div class="ui-widget-content slick-row odd" style="top:1225px"><div class="slick-cell l0 r0" title=""><span data-row="49" data-cell-type="row-header-selector">50</span></div><div class="slick-cell l1 r1" title="">CA</div><div class="slick-cell l2 r2">CLTCB</div><div class="slick-cell l3 r3"><span style="float:right">35903</span></div><div class="slick-cell l4 r4"><span style="float:right">59106</span></div><div class="slick-cell l5 r5"><span style="float:right">39681</span></div><div class="slick-cell l6 r6"><span style="float:right">46127</span></div><div class="slick-cell l7 r7"><span style="float:right">53723</span></div><div class="slick-cell l8 r8"><span style="float:right">63693</span></div><div class="slick-cell l9 r9"><span style="float:right">51515</span></div><div class="slick-cell l10 r10"><span style="float:right">53949</span></div><div class="slick-cell l11 r11"><span style="float:right">57011</span></div><div class="slick-cell l12 r12"><span style="float:right">60031</span></div><div class="slick-cell l13 r13"><span style="float:right">61812</span></div><div class="slick-cell l14 r14"><span style="float:right">51015</span></div><div class="slick-cell l15 r15"><span style="float:right">47452</span></div><div class="slick-cell l16 r16"><span style="float:right">66956</span></div><div class="slick-cell l17 r17"><span style="float:right">60670</span></div><div class="slick-cell l18 r18"><span style="float:right">56405</span></div><div class="slick-cell l19 r19"><span style="float:right">66630</span></div><div class="slick-cell l20 r20"><span style="float:right">75109</span></div><div class="slick-cell l21 r21"><span style="float:right">67892</span></div><div class="slick-cell l22 r22"><span style="float:right">68565</span></div><div class="slick-cell l23 r23"><span style="float:right">66170</span></div><div class="slick-cell l24 r24"><span style="float:right">78401</span></div></div><div class="ui-widget-content slick-row even" style="top:1250px"><div class="slick-cell l0 r0"><span data-row="50" data-cell-type="row-header-selector">51</span></div><div class="slick-cell l1 r1" title="">CA</div><div class="slick-cell l2 r2" title="">DFTCB</div><div class="slick-cell l3 r3"><span style="float:right">155427</span></div><div class="slick-cell l4 r4"><span style="float:right">160838</span></div><div class="slick-cell l5 r5"><span style="float:right">173939</span></div><div class="slick-cell l6 r6"><span style="float:right">187614</span></div><div class="slick-cell l7 r7" title=""><span style="float:right">204623</span></div><div class="slick-cell l8 r8"><span style="float:right">204484</span></div><div class="slick-cell l9 r9"><span style="float:right">218770</span></div><div class="slick-cell l10 r10"><span style="float:right">221865</span></div><div class="slick-cell l11 r11"><span style="float:right">224794</span></div><div class="slick-cell l12 r12"><span style="float:right">226549</span></div><div class="slick-cell l13 r13"><span style="float:right">228462</span></div><div class="slick-cell l14 r14"><span style="float:right">276030</span></div><div class="slick-cell l15 r15"><span style="float:right">268459</span></div><div class="slick-cell l16 r16"><span style="float:right">302135</span></div><div class="slick-cell l17 r17"><span style="float:right">254992</span></div><div class="slick-cell l18 r18"><span style="float:right">246600</span></div><div class="slick-cell l19 r19"><span style="float:right">266843</span></div><div class="slick-cell l20 r20"><span style="float:right">301471</span></div><div class="slick-cell l21 r21"><span style="float:right">350747</span></div><div class="slick-cell l22 r22"><span style="float:right">389528</span></div><div class="slick-cell l23 r23"><span style="float:right">362766</span></div><div class="slick-cell l24 r24"><span style="float:right">393320</span></div></div><div class="ui-widget-content slick-row odd" style="top:1275px"><div class="slick-cell l0 r0"><span data-row="51" data-cell-type="row-header-selector">52</span></div><div class="slick-cell l1 r1" title="">CA</div><div class="slick-cell l2 r2">HLTCB</div><div class="slick-cell l3 r3" title=""><span style="float:right">33896</span></div><div class="slick-cell l4 r4"><span style="float:right">34364</span></div><div class="slick-cell l5 r5"><span style="float:right">38820</span></div><div class="slick-cell l6 r6" title=""><span style="float:right">41904</span></div><div class="slick-cell l7 r7"><span style="float:right">41745</span></div><div class="slick-cell l8 r8"><span style="float:right">42094</span></div><div class="slick-cell l9 r9"><span style="float:right">37954</span></div><div class="slick-cell l10 r10"><span style="float:right">43267</span></div><div class="slick-cell l11 r11"><span style="float:right">46731</span></div><div class="slick-cell l12 r12"><span style="float:right">56334</span></div><div class="slick-cell l13 r13"><span style="float:right">57893</span></div><div class="slick-cell l14 r14"><span style="float:right">60083</span></div><div class="slick-cell l15 r15"><span style="float:right">64605</span></div><div class="slick-cell l16 r16"><span style="float:right">69350</span></div><div class="slick-cell l17 r17"><span style="float:right">73850</span></div><div class="slick-cell l18 r18"><span style="float:right">69172</span></div><div class="slick-cell l19 r19"><span style="float:right">68448</span></div><div class="slick-cell l20 r20"><span style="float:right">61132</span></div><div class="slick-cell l21 r21"><span style="float:right">69553</span></div><div class="slick-cell l22 r22"><span style="float:right">83908</span></div><div class="slick-cell l23 r23"><span style="float:right">69673</span></div><div class="slick-cell l24 r24"><span style="float:right">61824</span></div></div><div class="ui-widget-content slick-row even" style="top:1300px"><div class="slick-cell l0 r0"><span data-row="52" data-cell-type="row-header-selector">53</span></div><div class="slick-cell l1 r1" title="">CA</div><div class="slick-cell l2 r2">HYTCB</div><div class="slick-cell l3 r3"><span style="float:right">187705</span></div><div class="slick-cell l4 r4" title=""><span style="float:right">163670</span></div><div class="slick-cell l5 r5"><span style="float:right">241087</span></div><div class="slick-cell l6 r6"><span style="float:right">265551</span></div><div class="slick-cell l7 r7"><span style="float:right">231188</span></div><div class="slick-cell l8 r8"><span style="float:right">319052</span></div><div class="slick-cell l9 r9"><span style="float:right">273247</span></div><div class="slick-cell l10 r10"><span style="float:right">368007</span></div><div class="slick-cell l11 r11"><span style="float:right">282561</span></div><div class="slick-cell l12 r12"><span style="float:right">422243</span></div><div class="slick-cell l13 r13"><span style="float:right">399628</span></div><div class="slick-cell l14 r14"><span style="float:right">408830</span></div><div class="slick-cell l15 r15"><span style="float:right">329587</span></div><div class="slick-cell l16 r16"><span style="float:right">402618</span></div><div class="slick-cell l17 r17"><span style="float:right">484740</span></div><div class="slick-cell l18 r18"><span style="float:right">417309</span></div><div class="slick-cell l19 r19"><span style="float:right">240578</span></div><div class="slick-cell l20 r20"><span style="float:right">148707</span></div><div class="slick-cell l21 r21"><span style="float:right">385489</span></div><div class="slick-cell l22 r22"><span style="float:right">351170</span></div><div class="slick-cell l23 r23"><span style="float:right">423618</span></div><div class="slick-cell l24 r24"><span style="float:right">311124</span></div></div><div class="ui-widget-content slick-row odd" style="top:1325px"><div class="slick-cell l0 r0"><span data-row="53" data-cell-type="row-header-selector">54</span></div><div class="slick-cell l1 r1">CA</div><div class="slick-cell l2 r2" title="">JFTCB</div><div class="slick-cell l3 r3" title=""><span style="float:right">140653</span></div><div class="slick-cell l4 r4"><span style="float:right">153376</span></div><div class="slick-cell l5 r5"><span style="float:right">174310</span></div><div class="slick-cell l6 r6"><span style="float:right">184117</span></div><div class="slick-cell l7 r7" title=""><span style="float:right">199588</span></div><div class="slick-cell l8 r8"><span style="float:right">222196</span></div><div class="slick-cell l9 r9"><span style="float:right">244527</span></div><div class="slick-cell l10 r10"><span style="float:right">292394</span></div><div class="slick-cell l11 r11"><span style="float:right">336577</span></div><div class="slick-cell l12 r12"><span style="float:right">341090</span></div><div class="slick-cell l13 r13"><span style="float:right">332941</span></div><div class="slick-cell l14 r14"><span style="float:right">350342</span></div><div class="slick-cell l15 r15"><span style="float:right">355936</span></div><div class="slick-cell l16 r16"><span style="float:right">352492</span></div><div class="slick-cell l17 r17"><span style="float:right">337622</span></div><div class="slick-cell l18 r18"><span style="float:right">350711</span></div><div class="slick-cell l19 r19"><span style="float:right">342150</span></div><div class="slick-cell l20 r20"><span style="float:right">354272</span></div><div class="slick-cell l21 r21"><span style="float:right">362559</span></div><div class="slick-cell l22 r22"><span style="float:right">369648</span></div><div class="slick-cell l23 r23"><span style="float:right">354212</span></div><div class="slick-cell l24 r24"><span style="float:right">331343</span></div></div><div class="ui-widget-content slick-row even" style="top:1350px"><div class="slick-cell l0 r0"><span data-row="54" data-cell-type="row-header-selector">55</span></div><div class="slick-cell l1 r1" title="">CA</div><div class="slick-cell l2 r2">MMTCB</div><div class="slick-cell l3 r3"><span style="float:right">719793</span></div><div class="slick-cell l4 r4"><span style="float:right">748747</span></div><div class="slick-cell l5 r5"><span style="float:right">778690</span></div><div class="slick-cell l6 r6"><span style="float:right">830028</span></div><div class="slick-cell l7 r7" title=""><span style="float:right">858891</span></div><div class="slick-cell l8 r8"><span style="float:right">892484</span></div><div class="slick-cell l9 r9"><span style="float:right">939050</span></div><div class="slick-cell l10 r10"><span style="float:right">965148</span></div><div class="slick-cell l11 r11"><span style="float:right">1028165</span></div><div class="slick-cell l12 r12"><span style="float:right">1073470</span></div><div class="slick-cell l13 r13"><span style="float:right">1124480</span></div><div class="slick-cell l14 r14"><span style="float:right">1151597</span></div><div class="slick-cell l15 r15"><span style="float:right">1222679</span></div><div class="slick-cell l16 r16"><span style="float:right">1264867</span></div><div class="slick-cell l17 r17"><span style="float:right">1236915</span></div><div class="slick-cell l18 r18"><span style="float:right">1268643</span></div><div class="slick-cell l19 r19"><span style="float:right">1327149</span></div><div class="slick-cell l20 r20"><span style="float:right">1398811</span></div><div class="slick-cell l21 r21"><span style="float:right">1461288</span></div><div class="slick-cell l22 r22"><span style="float:right">1415278</span></div><div class="slick-cell l23 r23"><span style="float:right">1332125</span></div><div class="slick-cell l24 r24"><span style="float:right">1328555</span></div></div><div class="ui-widget-content slick-row odd" style="top:1375px"><div class="slick-cell l0 r0"><span data-row="55" data-cell-type="row-header-selector">56</span></div><div class="slick-cell l1 r1" title="">CA</div><div class="slick-cell l2 r2" title="">NNTCB</div><div class="slick-cell l3 r3" title=""><span style="float:right">1301826</span></div><div class="slick-cell l4 r4"><span style="float:right">1400174</span></div><div class="slick-cell l5 r5" title=""><span style="float:right">1483423</span></div><div class="slick-cell l6 r6" title=""><span style="float:right">1623370</span></div><div class="slick-cell l7 r7"><span style="float:right">1817241</span></div><div class="slick-cell l8 r8"><span style="float:right">1813213</span></div><div class="slick-cell l9 r9"><span style="float:right">1982305</span></div><div class="slick-cell l10 r10"><span style="float:right">2048734</span></div><div class="slick-cell l11 r11"><span style="float:right">2187260</span></div><div class="slick-cell l12 r12"><span style="float:right">2189883</span></div><div class="slick-cell l13 r13"><span style="float:right">2241295</span></div><div class="slick-cell l14 r14"><span style="float:right">2265324</span></div><div class="slick-cell l15 r15"><span style="float:right">2303562</span></div><div class="slick-cell l16 r16"><span style="float:right">2154045</span></div><div class="slick-cell l17 r17"><span style="float:right">1937140</span></div><div class="slick-cell l18 r18"><span style="float:right">1937322</span></div><div class="slick-cell l19 r19"><span style="float:right">1849711</span></div><div class="slick-cell l20 r20"><span style="float:right">1864187</span></div><div class="slick-cell l21 r21"><span style="float:right">1646333</span></div><div class="slick-cell l22 r22"><span style="float:right">1900357</span></div><div class="slick-cell l23 r23"><span style="float:right">1890887</span></div><div class="slick-cell l24 r24"><span style="float:right">1947370</span></div></div><div class="ui-widget-content slick-row even" style="top:1400px"><div class="slick-cell l0 r0"><span data-row="56" data-cell-type="row-header-selector">57</span></div><div class="slick-cell l1 r1">CA</div><div class="slick-cell l2 r2">NUETB</div><div class="slick-cell l3 r3"><span style="float:right">1</span></div><div class="slick-cell l4 r4"><span style="float:right">55</span></div><div class="slick-cell l5 r5"><span style="float:right">84</span></div><div class="slick-cell l6 r6"><span style="float:right">2288</span></div><div class="slick-cell l7 r7"><span style="float:right">4369</span></div><div class="slick-cell l8 r8"><span style="float:right">3193</span></div><div class="slick-cell l9 r9"><span style="float:right">1895</span></div><div class="slick-cell l10 r10"><span style="float:right">6503</span></div><div class="slick-cell l11 r11"><span style="float:right">17003</span></div><div class="slick-cell l12 r12"><span style="float:right">27127</span></div><div class="slick-cell l13 r13"><span style="float:right">34375</span></div><div class="slick-cell l14 r14"><span style="float:right">38137</span></div><div class="slick-cell l15 r15"><span style="float:right">34266</span></div><div class="slick-cell l16 r16"><span style="float:right">28689</span></div><div class="slick-cell l17 r17"><span style="float:right">41277</span></div><div class="slick-cell l18 r18"><span style="float:right">66855</span></div><div class="slick-cell l19 r19"><span style="float:right">53107</span></div><div class="slick-cell l20 r20"><span style="float:right">87396</span></div><div class="slick-cell l21 r21"><span style="float:right">83801</span></div><div class="slick-cell l22 r22"><span style="float:right">95320</span></div><div class="slick-cell l23 r23"><span style="float:right">53665</span></div><div class="slick-cell l24 r24"><span style="float:right">35367</span></div></div><div class="ui-widget-content slick-row odd" style="top:1425px"><div class="slick-cell l0 r0"><span data-row="57" data-cell-type="row-header-selector">58</span></div><div class="slick-cell l1 r1">CA</div><div class="slick-cell l2 r2">P1TCB</div><div class="slick-cell l3 r3"><span style="float:right">280569</span></div><div class="slick-cell l4 r4"><span style="float:right">272676</span></div><div class="slick-cell l5 r5"><span style="float:right">283480</span></div><div class="slick-cell l6 r6"><span style="float:right">271287</span></div><div class="slick-cell l7 r7"><span style="float:right">286236</span></div><div class="slick-cell l8 r8"><span style="float:right">290069</span></div><div class="slick-cell l9 r9"><span style="float:right">296708</span></div><div class="slick-cell l10 r10"><span style="float:right">275144</span></div><div class="slick-cell l11 r11"><span style="float:right">302788</span></div><div class="slick-cell l12 r12"><span style="float:right">316652</span></div><div class="slick-cell l13 r13"><span style="float:right">316633</span></div><div class="slick-cell l14 r14"><span style="float:right">313950</span></div><div class="slick-cell l15 r15"><span style="float:right">331879</span></div><div class="slick-cell l16 r16"><span style="float:right">350978</span></div><div class="slick-cell l17 r17"><span style="float:right">346644</span></div><div class="slick-cell l18 r18"><span style="float:right">342996</span></div><div class="slick-cell l19 r19"><span style="float:right">371830</span></div><div class="slick-cell l20 r20"><span style="float:right">411676</span></div><div class="slick-cell l21 r21"><span style="float:right">431790</span></div><div class="slick-cell l22 r22"><span style="float:right">488647</span></div><div class="slick-cell l23 r23"><span style="float:right">423618</span></div><div class="slick-cell l24 r24"><span style="float:right">274368</span></div></div><div class="ui-widget-content slick-row even" style="top:1450px"><div class="slick-cell l0 r0"><span data-row="58" data-cell-type="row-header-selector">59</span></div><div class="slick-cell l1 r1">CA</div><div class="slick-cell l2 r2">RETCB</div><div class="slick-cell l3 r3"><span style="float:right">270161</span></div><div class="slick-cell l4 r4"><span style="float:right">248178</span></div><div class="slick-cell l5 r5"><span style="float:right">329046</span></div><div class="slick-cell l6 r6"><span style="float:right">360333</span></div><div class="slick-cell l7 r7"><span style="float:right">331757</span></div><div class="slick-cell l8 r8"><span style="float:right">418518</span></div><div class="slick-cell l9 r9"><span style="float:right">375877</span></div><div class="slick-cell l10 r10"><span style="float:right">473192</span></div><div class="slick-cell l11 r11"><span style="float:right">397366</span></div><div class="slick-cell l12 r12"><span style="float:right">544918</span></div><div class="slick-cell l13 r13"><span style="float:right">521978</span></div><div class="slick-cell l14 r14"><span style="float:right">533790</span></div><div class="slick-cell l15 r15"><span style="float:right">472312</span></div><div class="slick-cell l16 r16"><span style="float:right">553162</span></div><div class="slick-cell l17 r17"><span style="float:right">645073</span></div><div class="slick-cell l18 r18"><span style="float:right">578578</span></div><div class="slick-cell l19 r19"><span style="float:right">422852</span></div><div class="slick-cell l20 r20"><span style="float:right">338073</span></div><div class="slick-cell l21 r21"><span style="float:right">576601</span></div><div class="slick-cell l22 r22"><span style="float:right">559806</span></div><div class="slick-cell l23 r23"><span style="float:right">591928</span></div><div class="slick-cell l24 r24"><span style="float:right">503653</span></div></div><div class="ui-widget-content slick-row odd" style="top:1475px"><div class="slick-cell l0 r0"><span data-row="59" data-cell-type="row-header-selector">60</span></div><div class="slick-cell l1 r1">CA</div><div class="slick-cell l2 r2">RFTCB</div><div class="slick-cell l3 r3"><span style="float:right">506573</span></div><div class="slick-cell l4 r4"><span style="float:right">522976</span></div><div class="slick-cell l5 r5"><span style="float:right">430087</span></div><div class="slick-cell l6 r6"><span style="float:right">400839</span></div><div class="slick-cell l7 r7"><span style="float:right">436384</span></div><div class="slick-cell l8 r8"><span style="float:right">438488</span></div><div class="slick-cell l9 r9"><span style="float:right">482589</span></div><div class="slick-cell l10 r10"><span style="float:right">453860</span></div><div class="slick-cell l11 r11"><span style="float:right">464626</span></div><div class="slick-cell l12 r12"><span style="float:right">443972</span></div><div class="slick-cell l13 r13"><span style="float:right">442126</span></div><div class="slick-cell l14 r14"><span style="float:right">503393</span></div><div class="slick-cell l15 r15"><span style="float:right">490902</span></div><div class="slick-cell l16 r16"><span style="float:right">708606</span></div><div class="slick-cell l17 r17"><span style="float:right">622424</span></div><div class="slick-cell l18 r18"><span style="float:right">698395</span></div><div class="slick-cell l19 r19"><span style="float:right">868339</span></div><div class="slick-cell l20 r20"><span style="float:right">1083948</span></div><div class="slick-cell l21 r21"><span style="float:right">978486</span></div><div class="slick-cell l22 r22"><span style="float:right">986943</span></div><div class="slick-cell l23 r23"><span style="float:right">934885</span></div><div class="slick-cell l24 r24"><span style="float:right">821470</span></div></div><div class="ui-widget-content slick-row even" style="top:1500px"><div class="slick-cell l0 r0"><span data-row="60" data-cell-type="row-header-selector">61</span></div><div class="slick-cell l1 r1">CO</div><div class="slick-cell l2 r2">BMTCB</div><div class="slick-cell l3 r3"><span style="float:right">6479</span></div><div class="slick-cell l4 r4"><span style="float:right">6563</span></div><div class="slick-cell l5 r5"><span style="float:right">6420</span></div><div class="slick-cell l6 r6"><span style="float:right">6571</span></div><div class="slick-cell l7 r7"><span style="float:right">6816</span></div><div class="slick-cell l8 r8"><span style="float:right">6569</span></div><div class="slick-cell l9 r9"><span style="float:right">6982</span></div><div class="slick-cell l10 r10"><span style="float:right">7223</span></div><div class="slick-cell l11 r11"><span style="float:right">7434</span></div><div class="slick-cell l12 r12"><span style="float:right">7811</span></div><div class="slick-cell l13 r13"><span style="float:right">8364</span></div><div class="slick-cell l14 r14"><span style="float:right">8914</span></div><div class="slick-cell l15 r15"><span style="float:right">10032</span></div><div class="slick-cell l16 r16"><span style="float:right">10310</span></div><div class="slick-cell l17 r17"><span style="float:right">9433</span></div><div class="slick-cell l18 r18"><span style="float:right">9050</span></div><div class="slick-cell l19 r19"><span style="float:right">10276</span></div><div class="slick-cell l20 r20"><span style="float:right">12471</span></div><div class="slick-cell l21 r21"><span style="float:right">15473</span></div><div class="slick-cell l22 r22"><span style="float:right">16485</span></div><div class="slick-cell l23 r23"><span style="float:right">10749</span></div><div class="slick-cell l24 r24"><span style="float:right">14131</span></div></div><div class="ui-widget-content slick-row odd" style="top:1525px"><div class="slick-cell l0 r0"><span data-row="61" data-cell-type="row-header-selector">62</span></div><div class="slick-cell l1 r1">CO</div><div class="slick-cell l2 r2">CLTCB</div><div class="slick-cell l3 r3"><span style="float:right">68206</span></div><div class="slick-cell l4 r4"><span style="float:right">76938</span></div><div class="slick-cell l5 r5"><span style="float:right">79296</span></div><div class="slick-cell l6 r6"><span style="float:right">88958</span></div><div class="slick-cell l7 r7"><span style="float:right">89600</span></div><div class="slick-cell l8 r8"><span style="float:right">98117</span></div><div class="slick-cell l9 r9"><span style="float:right">109021</span></div><div class="slick-cell l10 r10"><span style="float:right">107862</span></div><div class="slick-cell l11 r11"><span style="float:right">112995</span></div><div class="slick-cell l12 r12"><span style="float:right">104487</span></div><div class="slick-cell l13 r13"><span style="float:right">115688</span></div><div class="slick-cell l14 r14"><span style="float:right">105682</span></div><div class="slick-cell l15 r15"><span style="float:right">119005</span></div><div class="slick-cell l16 r16"><span style="float:right">140487</span></div><div class="slick-cell l17 r17"><span style="float:right">138302</span></div><div class="slick-cell l18 r18"><span style="float:right">159333</span></div><div class="slick-cell l19 r19"><span style="float:right">185147</span></div><div class="slick-cell l20 r20"><span style="float:right">223762</span></div><div class="slick-cell l21 r21"><span style="float:right">218619</span></div><div class="slick-cell l22 r22"><span style="float:right">238041</span></div><div class="slick-cell l23 r23"><span style="float:right">247615</span></div><div class="slick-cell l24 r24"><span style="float:right">278732</span></div></div><div class="ui-widget-content slick-row even" style="top:1550px"><div class="slick-cell l0 r0"><span data-row="62" data-cell-type="row-header-selector">63</span></div><div class="slick-cell l1 r1">CO</div><div class="slick-cell l2 r2">DFTCB</div><div class="slick-cell l3 r3"><span style="float:right">24431</span></div><div class="slick-cell l4 r4"><span style="float:right">25649</span></div><div class="slick-cell l5 r5"><span style="float:right">23985</span></div><div class="slick-cell l6 r6"><span style="float:right">26412</span></div><div class="slick-cell l7 r7"><span style="float:right">23678</span></div><div class="slick-cell l8 r8"><span style="float:right">22862</span></div><div class="slick-cell l9 r9"><span style="float:right">26588</span></div><div class="slick-cell l10 r10"><span style="float:right">27424</span></div><div class="slick-cell l11 r11"><span style="float:right">32411</span></div><div class="slick-cell l12 r12"><span style="float:right">31888</span></div><div class="slick-cell l13 r13"><span style="float:right">30362</span></div><div class="slick-cell l14 r14"><span style="float:right">36401</span></div><div class="slick-cell l15 r15"><span style="float:right">40095</span></div><div class="slick-cell l16 r16"><span style="float:right">46069</span></div><div class="slick-cell l17 r17"><span style="float:right">51337</span></div><div class="slick-cell l18 r18"><span style="float:right">51525</span></div><div class="slick-cell l19 r19"><span style="float:right">54982</span></div><div class="slick-cell l20 r20"><span style="float:right">57870</span></div><div class="slick-cell l21 r21"><span style="float:right">59634</span></div><div class="slick-cell l22 r22"><span style="float:right">70211</span></div><div class="slick-cell l23 r23"><span style="float:right">65401</span></div><div class="slick-cell l24 r24"><span style="float:right">50821</span></div></div><div class="ui-widget-content slick-row odd" style="top:1575px"><div class="slick-cell l0 r0"><span data-row="63" data-cell-type="row-header-selector">64</span></div><div class="slick-cell l1 r1">CO</div><div class="slick-cell l2 r2">HLTCB</div><div class="slick-cell l3 r3"><span style="float:right">12077</span></div><div class="slick-cell l4 r4"><span style="float:right">11728</span></div><div class="slick-cell l5 r5"><span style="float:right">11857</span></div><div class="slick-cell l6 r6"><span style="float:right">11785</span></div><div class="slick-cell l7 r7"><span style="float:right">14452</span></div><div class="slick-cell l8 r8"><span style="float:right">12790</span></div><div class="slick-cell l9 r9"><span style="float:right">13395</span></div><div class="slick-cell l10 r10"><span style="float:right">16873</span></div><div class="slick-cell l11 r11"><span style="float:right">18438</span></div><div class="slick-cell l12 r12"><span style="float:right">18757</span></div><div class="slick-cell l13 r13"><span style="float:right">17906</span></div><div class="slick-cell l14 r14"><span style="float:right">19236</span></div><div class="slick-cell l15 r15"><span style="float:right">22552</span></div><div class="slick-cell l16 r16"><span style="float:right">22068</span></div><div class="slick-cell l17 r17"><span style="float:right">19318</span></div><div class="slick-cell l18 r18"><span style="float:right">18949</span></div><div class="slick-cell l19 r19"><span style="float:right">20398</span></div><div class="slick-cell l20 r20"><span style="float:right">19545</span></div><div class="slick-cell l21 r21"><span style="float:right">22343</span></div><div class="slick-cell l22 r22"><span style="float:right">14228</span></div><div class="slick-cell l23 r23"><span style="float:right">14279</span></div><div class="slick-cell l24 r24"><span style="float:right">13840</span></div></div></div></div><div tabindex="0" hidefocus="" style="position:fixed;width:0;height:0;top:0;left:0;outline:0;"></div></div></div></td></tr></tbody></table></div><div class="wcPanelTabContent wcPanelTabContentHidden" id="1"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content"><div class="sql-editor-explain" tabindex="0"></div></div></td></tr></tbody></table></div><div class="wcPanelTabContent wcPanelTabContentHidden" id="2"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content"><div class="sql-editor-message" tabindex="0">Successfully run. Total query runtime: 111 msec.
+624 rows affected.</div></div></td></tr></tbody></table></div><div class="wcPanelTabContent wcPanelTabContentHidden" id="3"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content"><div id="notification_grid" class="sql-editor-notifications" tabindex="0"><table class="backgrid presentation table table-bordered table-hover table-noouter-border table-bottom-border"><thead><tr><th class="sortable renderable recorded_time"><button>Recorded time<span class="sort-caret" aria-hidden="true"></span></button></th><th class="sortable renderable channel"><button>Event<span class="sort-caret" aria-hidden="true"></span></button></th><th class="sortable renderable pid"><button>Process ID<span class="sort-caret" aria-hidden="true"></span></button></th><th class="sortable renderable payload"><button>Payload<span class="sort-caret" aria-hidden="true"></span></button></th></tr></thead><tbody><tr class="empty"><td colspan="4"><span>No data found</span></td></tr></tbody></table></div></div></td></tr></tbody></table></div></div></div></div><div class="wcSplitterBar wcWide wcSplitterBarH" style="top: 255px; left: 0px;"><div class="wcSplitterBarLine"></div></div></div></div>
+    </div>
+</div>
+<script>
+            	require(['sources/generated/sqleditor', 'sources/generated/browser_nodes', 'sources/generated/codemirror', 'sources/generated/slickgrid'], function(ctx) {
+    var $ = pgAdmin.SqlEditor.jquery,
+        S = pgAdmin.SqlEditor.S,
+        editorPanel = $('.sql-editor'),
+        loadingDiv = $('#fetching_data'),
+        msgDiv = loadingDiv.find('.sql-editor-busy-text');
+
+    // Register unload event on window close.
+    /* If opened in new tab, close the connection only on tab/window close and
+     * not on refresh attempt because the user may cancel the reload
+     */
+    if(window.opener) {
+      $(window).on('unload', function(ev) {
+        $.ajax({
+          method: 'DELETE',
+          url: "/datagrid/" + "close/" + 6596331
+        });
+      });
+    } else {
+      $(window).on('beforeunload', function(ev) {
+        $.ajax({
+          method: 'DELETE',
+          url: "/datagrid/" + "close/" + 6596331
+        });
+      });
+    }
+
+    // Get the controller object from pgAdmin.SqlEditor
+    var sqlEditorController = pgAdmin.SqlEditor.create(editorPanel);
+
+    // Listen on events to show/hide loading-icon and change messages.
+    sqlEditorController.on('pgadmin-sqleditor:loading-icon:message', function(msg) {
+        msgDiv.text(msg);
+      }).on('pgadmin-sqleditor:loading-icon:show', function(msg) {
+        loadingDiv.removeClass('d-none');
+        msgDiv.text(msg);
+      }).on('pgadmin-sqleditor:loading-icon:hide', function() {
+        loadingDiv.addClass('d-none');
+      });
+            var script_type_url = '';
+        // Start the query tool.
+    sqlEditorController.start(
+        6596331,
+        {"is_query_tool": "true", "sgid": "1", "sid": "1", "server_type": "pg", "did": "24576", "title": "Project-2/postgres@PostgreSQL 12"},
+        '{"floating":[],"root":{"type":"wcSplitter","horizontal":false,"isDrawer":false,"pane0":{"type":"wcSplitter","horizontal":true,"isDrawer":false,"pane0":{"type":"wcFrame","floating":false,"isFocus":false,"tabOrientation":"top","pos":{"x":0.5,"y":0.5},"size":{"x":749.25,"y":154.60500000000002},"tab":0,"panels":[{"type":"wcPanel","panelType":"sql_panel","size":{"x":749.25,"y":154.60500000000002},"customData":{}},{"type":"wcPanel","panelType":"history","size":{"x":999,"y":154.60500000000002},"customData":{}}]},"pane1":{"type":"wcFrame","floating":false,"isFocus":false,"tabOrientation":"top","pos":{"x":0.5,"y":0.5},"size":{"x":249.75,"y":154.60500000000002},"tab":0,"panels":[{"type":"wcPanel","panelType":"scratch","size":{"x":249.75,"y":154.60500000000002},"customData":{}}]},"pos":0.75},"pane1":{"type":"wcFrame","floating":false,"isFocus":false,"tabOrientation":"top","pos":{"x":0.5,"y":0.5},"size":{"x":999,"y":468.5},"tab":0,"panels":[{"type":"wcPanel","panelType":"data_output","size":{"x":999,"y":468.5},"customData":{}},{"type":"wcPanel","panelType":"explain","size":{"x":999,"y":468.5},"customData":{}},{"type":"wcPanel","panelType":"messages","size":{"x":999,"y":468.5},"customData":{}},{"type":"wcPanel","panelType":"notifications","size":{"x":999,"y":468.5},"customData":{}}]},"pos":0.5}}'
+    );
+});
+
+</script>
+
+
+<div class="alertify ajs-hidden  ajs-movable ajs-pinnable ajs-zoom"><div class="ajs-dimmer"></div><div class="ajs-modal" tabindex="0"><div class="ajs-dialog" tabindex="0"><button class="ajs-reset"></button><div class="ajs-commands"><button class="ajs-pin"></button><button class="ajs-maximize"></button><button class="ajs-close"></button></div><div class="ajs-header">AlertifyJS</div><div class="ajs-body"><div class="ajs-content"></div></div><div class="ajs-footer"><div class="ajs-auxiliary ajs-buttons"></div><div class="ajs-primary ajs-buttons"><button class="ajs-button btn btn-secondary fa fa-lg fa-times pg-alertify-button">Cancel</button><button class="ajs-button btn btn-primary fa fa-lg fa-check pg-alertify-button">OK</button></div></div><div class="ajs-handle"></div><button class="ajs-reset"></button></div></div></div><div class="alertify ajs-hidden  ajs-movable ajs-pinnable ajs-zoom"><div class="ajs-dimmer"></div><div class="ajs-modal" tabindex="0"><div class="ajs-dialog" tabindex="0"><button class="ajs-reset"></button><div class="ajs-commands"><button class="ajs-pin"></button><button class="ajs-maximize"></button><button class="ajs-close"></button></div><div class="ajs-header">AlertifyJS</div><div class="ajs-body"><div class="ajs-content"><p></p><input class="form-control" type="text"></div></div><div class="ajs-footer"><div class="ajs-auxiliary ajs-buttons"></div><div class="ajs-primary ajs-buttons"><button class="ajs-button btn btn-secondary fa fa-lg fa-times pg-alertify-button">Cancel</button><button class="ajs-button btn btn-primary fa fa-lg fa-check pg-alertify-button">OK</button></div></div><div class="ajs-handle"></div><button class="ajs-reset"></button></div></div></div><div class="alertify-notifier ajs-bottom ajs-right"></div><div class="alertify ajs-hidden  ajs-movable ajs-pinnable ajs-zoom"><div class="ajs-dimmer"></div><div class="ajs-modal" tabindex="0"><div class="ajs-dialog" tabindex="0"><button class="ajs-reset"></button><div class="ajs-commands"><button class="ajs-pin"></button><button class="ajs-maximize"></button><button class="ajs-close"></button></div><div class="ajs-header">AlertifyJS</div><div class="ajs-body"><div class="ajs-content"></div></div><div class="ajs-footer"><div class="ajs-auxiliary ajs-buttons"></div><div class="ajs-primary ajs-buttons"><button class="ajs-button btn btn-secondary fa fa-lg fa-times pg-alertify-button">Cancel</button><button class="ajs-button btn btn-primary fa fa-lg fa-check pg-alertify-button">OK</button></div></div><div class="ajs-handle"></div><button class="ajs-reset"></button></div></div></div><div class="alertify ajs-hidden  ajs-movable ajs-pinnable ajs-zoom"><div class="ajs-dimmer"></div><div class="ajs-modal" tabindex="0"><div class="ajs-dialog" tabindex="0"><button class="ajs-reset"></button><div class="ajs-commands"><button class="ajs-pin"></button><button class="ajs-maximize"></button><button class="ajs-close"></button></div><div class="ajs-header">AlertifyJS</div><div class="ajs-body"><div class="ajs-content"><p></p><input class="form-control" type="text"></div></div><div class="ajs-footer"><div class="ajs-auxiliary ajs-buttons"></div><div class="ajs-primary ajs-buttons"><button class="ajs-button btn btn-secondary fa fa-lg fa-times pg-alertify-button">Cancel</button><button class="ajs-button btn btn-primary fa fa-lg fa-check pg-alertify-button">OK</button></div></div><div class="ajs-handle"></div><button class="ajs-reset"></button></div></div></div><div class="alertify  ajs-modeless ajs-movable ajs-resizable ajs-zoom ajs-no-padding ajs-no-overflow ajs-out ajs-hidden"><div class="ajs-dimmer"></div><div class="ajs-modal" tabindex="0"><div class="ajs-dialog pg-el-container" tabindex="0" style="" el="sm"><button class="ajs-reset"></button><div class="ajs-commands"><button class="ajs-pin"></button><button class="ajs-maximize" title="Maximize"></button><button class="ajs-close" title="Close"></button></div><div class="ajs-header">Save File</div><div class="ajs-body"><div class="ajs-content alertify_tools_dialog_properties"><div class="storage_dialog file_selection_dlg"></div></div></div><div class="ajs-footer"><div class="ajs-auxiliary ajs-buttons"></div><div class="ajs-primary ajs-buttons"><button class="ajs-button btn btn-secondary fa fa-times file_manager_create_cancel pg-alertify-button">Cancel</button><button class="ajs-button btn btn-primary fa fa-file file_manager_create file_manager_ok pg-alertify-button disabled" disabled="">Create</button></div></div><div class="ajs-handle"></div><button class="ajs-reset"></button></div></div></div></body></html>

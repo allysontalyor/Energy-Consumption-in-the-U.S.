@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Practice Toast</title>
+  <link rel="stylesheet" href="https://uicdn.toast.com/tui.chart/latest/tui-chart.css">
+  <script src="https://uicdn.toast.com/tui.chart/latest/tui-chart-all.js"></script>
+  <script src="https://uicdn.toast.com/tui.chart/latest/maps/usa.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <div class="row"></div>
+        <div class="col-md-2"></div>
+          <div class="well"></div>
+            <h5>Select Energy Type:</h5>
+            <select id="selDataset" onchange="getEnergy(this.value)">
+                <option value="0000">Select</option>
+                <option value="BMTCB">Biomass</option>
+                <option value="CLTCB">Coal</option>
+                <option value="DFTCB">Distillate Fuel Oil</option>
+                <option value="HLTCB">HGL</option>
+                <option value="HYTCB">Hydroelectric Power</option>
+                <option value="JFTCB">Jet Fuel</option>
+                <option value="MMTCB">Motor Gas excl Ethanol</option>
+                <option value="NNTCB">Natural Gas</option>
+                <option value="NUETB">Nuclear Electric Power</option>
+                <option value="P1TCB">Other Petroleum</option>
+                <option value="RETCB">Total Renewables</option>
+                <option value="RFTCB">Residual Fuel</option>
+              </select>
+    <div id="plot"></div>         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>            
+    <script src="plot.js"></script>
+</body>
+</html>
+
+
