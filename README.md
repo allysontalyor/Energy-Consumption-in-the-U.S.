@@ -1,6 +1,6 @@
 Group Project
 
-# <p align="center">How Has Energy Consumption Changed Overtime? </p>
+# <p align="center">How Has Energy Consumption Changed Over Time? </p>
 
 <p align="center">
   <img width="600" height="200" src="https://github.com/allysontalyor/Project-2/blob/master/Images/Different%20types%20of%20Energy.jpg">
