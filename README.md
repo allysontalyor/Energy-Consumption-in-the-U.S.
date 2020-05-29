@@ -12,7 +12,7 @@ Group Project
 
 -	AIM 1: 	Analyze the energy consumption data between the dates of 1960-2017 by sector (industrial, commercial, transportation, and residential)
 <p align="center">
-  <img width="550" height="200" src="https://github.com/allysontalyor/Project-2/blob/master/image1.png">
+  <img width="550" height="200" src="https://github.com/allysontalyor/Project-2/blob/master/image.png">
 </p>
 -	AIM 2:  Look at how energy consumption by sector has changed over time.
 <p align="center">
