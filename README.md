@@ -10,9 +10,9 @@ Group Project
 
 ##Aims:
 
--	AIM 1: 	Analyze the energy consumption data between the dates of 1960-2017
--	AIM 2:  Look at the different types of energy consumption and draw a conclusion by understanding the changes in data
--	AIM 3: Understand the trends in energy consumption around the U.S. within each dataset from the U.S. Energy Information Administration
+-	AIM 1: 	Analyze the energy consumption data between the dates of 1960-2017 by sector (industrial, commercial, transportation, and residential)
+-	AIM 2:  Look at how energy consumption by sector has changed over time.
+-	AIM 3: Analyze how the consumption of different energy types has changed over time.
 -	AIM 4: Utilize Analysis tools such as :  Python | JavaScript | Toast UI Chart | CSV | Json
 -	AIM 5: Provide data on energy consumption around the U.S.
 
@@ -37,4 +37,4 @@ Our goal is to provide data regarding energy consumption by using CSVs from:
 https://www.eia.gov/state/seds/seds-data-complete.php#CompleteDataFile
 
 
-We will look at different states, dates, and types of energy used
+Website can be accessed using a Flask Server in the main.py file.
