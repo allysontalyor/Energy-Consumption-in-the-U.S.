@@ -11,10 +11,22 @@ Group Project
 ##Aims:
 
 -	AIM 1: 	Analyze the energy consumption data between the dates of 1960-2017 by sector (industrial, commercial, transportation, and residential)
+<p align="center">
+  <img width="550" height="200" src="https://github.com/allysontalyor/Project-2/blob/master/image1.png">
+</p>
 -	AIM 2:  Look at how energy consumption by sector has changed over time.
+<p align="center">
+  <img width="600" height="200" src="https://github.com/allysontalyor/Project-2/blob/master/image2.png">
+</p>
 -	AIM 3: Analyze how the consumption of different energy types has changed over time.
+<p align="center">
+  <img width="600" height="200" src="https://github.com/allysontalyor/Project-2/blob/master/image3.png">
+</p>
 -	AIM 4: Utilize Analysis tools such as :  Python | JavaScript | Toast UI Chart | CSV | Json
 -	AIM 5: Provide data on energy consumption around the U.S.
+<p align="center">
+  <img width="600" height="200" src="https://github.com/allysontalyor/Project-2/blob/master/image4.png">
+</p>
 
 ## Impact and Intended Results
 
